@@ -14,11 +14,13 @@ Plugin 'pangloss/vim-javascript' " javascript syntax and indentation
 Plugin 'scrooloose/syntastic' " support for all kinds of linters
 Plugin 'KevinGoodsell/vim-csexact' " allows colorschemes to appear accurately in a terminal
 Plugin 'flazz/vim-colorschemes' " lots of colorschemes
-Plugin 'wincent/command-t' " allows you to quickly open files
+" Plugin 'wincent/command-t' " allows you to quickly open files
+Plugin 'ctrlpvim/ctrlp.vim' " it seems likes this is more commonly used than command-t
 Plugin 'tpope/vim-surround' " Makes it easy to modify matching brackets
 Plugin 'vim-airline/vim-airline' " cool status bar
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'takac/vim-hardtime' " forcing myself to actually learn to use vim
+let g:hardtime_maxcount = 3 " Only allowed to use 3 of hjkl per second. I'm forcing myself to use vim :(
 set laststatus=2 " airline status bar always on
 Plugin 'scrooloose/nerdcommenter' "Allow quick commenting of lines
 Plugin 'airblade/vim-gitgutter' " Vim git gutter
