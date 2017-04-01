@@ -22,6 +22,7 @@ Plugin 'takac/vim-hardtime' " forcing myself to actually learn to use vim
 set laststatus=2 " airline status bar always on
 Plugin 'scrooloose/nerdcommenter' "Allow quick commenting of lines
 Plugin 'airblade/vim-gitgutter' " Vim git gutter
+" Plugin 'justinmk/vim-sneak' " This looks useful for when I actually become good at using vim.
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -32,6 +33,7 @@ filetype plugin indent on    " required
 let g:syntastic_check_on_open=1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
+let g:hardtime_default_on = 1 "Enables hardtime by default
 colorscheme wombat
 set completeopt-=preview " disable annoying preview window YouCompleteMe opens all the time
 set nu " turn on line numbers by default
