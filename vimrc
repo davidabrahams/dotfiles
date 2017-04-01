@@ -7,14 +7,14 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " Put all your Vundle plugins here. All of these are hosted on github
-Plugin 'Auto-Pairs'
+Plugin 'Auto-Pairs' " autocomplete matching quotes and paren
 Plugin 'tpope/vim-unimpaired'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'pangloss/vim-javascript'
-Plugin 'scrooloose/syntastic'
-Plugin 'KevinGoodsell/vim-csexact'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'wincent/command-t'
+Plugin 'Valloric/YouCompleteMe' " Sweet autocompletion
+Plugin 'pangloss/vim-javascript' " javascript syntax and indentation
+Plugin 'scrooloose/syntastic' " support for all kinds of linters
+Plugin 'KevinGoodsell/vim-csexact' " allows colorschemes to appear accurately in a terminal
+Plugin 'flazz/vim-colorschemes' " lots of colorschemes
+Plugin 'wincent/command-t' " allows you to quickly open files
 call vundle#end()            " required
 filetype plugin indent on    " required
 
