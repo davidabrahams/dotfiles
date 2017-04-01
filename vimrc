@@ -14,6 +14,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/syntastic'
 Plugin 'KevinGoodsell/vim-csexact'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'wincent/command-t'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
