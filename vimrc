@@ -26,6 +26,7 @@ Plugin 'scrooloose/nerdcommenter' "Allow quick commenting of lines
 Plugin 'airblade/vim-gitgutter' " Vim git gutter
 " Plugin 'justinmk/vim-sneak' " This looks useful for when I actually become good at using vim.
 Plugin 'gioele/vim-autoswap' " If you try to open a file that's already open in vim, it'll just switch over to it!
+Plugin 'whatyouhide/vim-lengthmatters' " highlight lines that are too long
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -41,3 +42,4 @@ colorscheme wombat
 set completeopt-=preview " disable annoying preview window YouCompleteMe opens all the time
 set nu " turn on line numbers by default
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 " set javascript to 2 spaces
+set tw=80 "text width
