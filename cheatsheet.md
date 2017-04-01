@@ -12,9 +12,19 @@
 - `_` first non-blank character this line
 - `+` first non-blank character previous line
 - `-` first non-blank character next line
-- `/pattern` search for `pattern`
 - `w`/`e` start of following/end of this word (letters and underscores)
 - `W`/`E` start of following/end of this Word (everything except white space)
+
+## Finding matches
+
+- `/pattern` search for `pattern`
+- `*`/`#` next/previous occurrence of word under cursor
+- `%` corresponding `(` `{` `[`
+
+#### Current line
+
+- `fa/Fa` next/prev occurrence of `a` on line (`,`/`;` next/prev occurrence)
+- `ta/Ta` just before/after next/prev character `a`
 
 ## Actions
 
