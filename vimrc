@@ -8,7 +8,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " Put all your Vundle plugins here. All of these are hosted on github
 Plugin 'Auto-Pairs' " autocomplete matching quotes and paren
-Plugin 'tpope/vim-unimpaired'
+
 Plugin 'Valloric/YouCompleteMe' " Sweet autocompletion
 Plugin 'pangloss/vim-javascript' " javascript syntax and indentation
 Plugin 'scrooloose/syntastic' " support for all kinds of linters
@@ -25,6 +25,7 @@ set laststatus=2 " airline status bar always on
 Plugin 'scrooloose/nerdcommenter' "Allow quick commenting of lines
 Plugin 'airblade/vim-gitgutter' " Vim git gutter
 " Plugin 'justinmk/vim-sneak' " This looks useful for when I actually become good at using vim.
+Plugin 'gioele/vim-autoswap' " If you try to open a file that's already open in vim, it'll just switch over to it!
 call vundle#end()            " required
 filetype plugin indent on    " required
 
