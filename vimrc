@@ -14,8 +14,8 @@ Plugin 'pangloss/vim-javascript' " javascript syntax and indentation
 Plugin 'scrooloose/syntastic' " support for all kinds of linters
 Plugin 'KevinGoodsell/vim-csexact' " allows colorschemes to appear accurately in a terminal
 Plugin 'flazz/vim-colorschemes' " lots of colorschemes
-" Plugin 'wincent/command-t' " allows you to quickly open files
 Plugin 'ctrlpvim/ctrlp.vim' " it seems likes this is more commonly used than command-t
+let g:ctrlp_map = '<c-p>' " actually open ctrlp with <c-p>
 Plugin 'tpope/vim-surround' " Makes it easy to modify matching brackets
 Plugin 'vim-airline/vim-airline' " cool status bar
 Plugin 'vim-airline/vim-airline-themes'
