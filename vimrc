@@ -39,7 +39,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
 let g:hardtime_default_on = 1 "Enables hardtime by default
 colorscheme wombat " I think this works on the airline bar also
-set completeopt-=preview " disable annoying preview window YouCompleteMe opens all the time
+" set completeopt-=preview " disable annoying preview window YouCompleteMe opens all the time
 set nu " turn on line numbers by default
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 " set javascript to 2 spaces
 set tw=80 "text width
