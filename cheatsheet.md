@@ -56,6 +56,14 @@ Possible actions are `y`, `d`, and `v` (to select).
 Possible objects are characters like `"`, `` ` ``, `)`, `}`, `]`, or `w`, `s`
 (sentence), `p` (paragraph).
 
+## Indenting
+
+After selecting text with visual block/visual mode:
+
+- `>`/`<` indent to the left/right
+- `J` join lines together
+- `=` auto-indent
+
 ## Text objects
 
 Works in visual-block mode or after a command.
@@ -80,14 +88,6 @@ Preface with `a` for "an", `i` for "inner".
 - `qa` to enable, disable macro recording (optionally into register `a`)
 - `@@`/`@a` to run macros
 
-## Indenting
-
-After selecting text visually:
-
-- `>`/`<` indent to the left/right
-- `J` join lines together
-- `=` auto-indent
-
 ## Screen movement / Scrolling
 
 - `C-d`/`C-u` scroll down/up half a page
@@ -99,4 +99,11 @@ After selecting text visually:
 ## File I/O (using CtrlP)
 
 - `C-p` invole CtrlP
-- 
+- `C-j`/`C-k` scroll up/down results
+- `C-t`/`C-v`/`C-x` open file in new tab/vsplit/hsplit
+- `C-n`/`C-p` select the next/previous string in prompt's history.
+
+## Window management
+
+- `C-w`+`j`/`k`/`h`/`l` switch to window below, above, left, or right
+- `C-w`+`J`/`K/`H`/`L` move window up, down, left, right
