@@ -46,3 +46,5 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown " enable markdown synt
 set tw=80 "text width
 nnoremap ; :
 nnoremap : ;
+set splitright " open new vsplit files on the right
+set splitbelow " open new hsplit files on the bottom

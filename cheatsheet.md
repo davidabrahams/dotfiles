@@ -85,12 +85,12 @@ Preface with `a` for "an", `i` for "inner".
 
 ## Macros
 
-- `qa` to enable, disable macro recording (optionally into register `a`)
-- `@@`/`@a` to run macros
+- `qa` to enable, disable macro recording into register `a`
+- `@a` to run macro in register `a` (`@@` to run most recently run macro)
 
 ## Screen movement / Scrolling
 
-- `C-d`/`C-u` scroll down/up half a page
+- `<C-d>`/`<C-u>` scroll down/up half a page
 - `H` move top of screen
 - `M` move middle of screen
 - `L` move bottom of screen
@@ -98,12 +98,13 @@ Preface with `a` for "an", `i` for "inner".
 
 ## File I/O (using CtrlP)
 
-- `C-p` invole CtrlP
-- `C-j`/`C-k` scroll up/down results
-- `C-t`/`C-v`/`C-x` open file in new tab/vsplit/hsplit
-- `C-n`/`C-p` select the next/previous string in prompt's history.
+- `<C-p>` invole CtrlP
+- `<C-j>`/`<C-k>` scroll up/down results
+- `<C-o>` open file. Prompts you if you want it in a buffer (`i`), or a split.
+- `<C-t>`/`<C-v>`/`<C-x>` open file in new tab/vsplit/hsplit
+- `<C-n>`/`<C-p>` select the next/previous string in prompt's history.
 
 ## Window management
 
-- `C-w`+`j`/`k`/`h`/`l` switch to window below, above, left, or right
-- `C-w`+`J`/`K/`H`/`L` move window up, down, left, right
+- `<C-w>`+`j`/`k`/`h`/`l` switch to window below, above, left, or right
+- `<C-w>`+`J`/`K/`H`/`L` move window up, down, left, right
