@@ -50,7 +50,7 @@
 `<action>a<object>` or `<action>i<object>`.
 
 `i` selects up to, `a` selects up to and including.
-``
+
 Possible actions are `y`, `d`, and `v` (to select).
 
 Possible objects are characters like `"`, `` ` ``, `)`, `}`, `]`, or `w`, `s`
