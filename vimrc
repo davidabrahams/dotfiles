@@ -22,10 +22,10 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'takac/vim-hardtime' " forcing myself to actually learn to use vim
 let g:hardtime_maxcount = 3 " Only allowed to use 3 of hjkl per second. I'm forcing myself to use vim :(
 set laststatus=2 " airline status bar always on
-Plugin 'scrooloose/nerdcommenter' "Allow quick commenting of lines
+Plugin 'tpope/vim-commentary' "Allow quick commenting of lines
 Plugin 'airblade/vim-gitgutter' " Vim git gutter
 " Plugin 'justinmk/vim-sneak' " This looks useful for when I actually become good at using vim.
-Plugin 'gioele/vim-autoswap' " If you try to open a file that's already open in vim, it'll just switch over to it!
+Plugin 'gioele/vim-autoswap' " If you try to open a file that's already open in vim, it'll just switch over to it! Requires wmctrl is installed.
 Plugin 'whatyouhide/vim-lengthmatters' " highlight lines that are too long
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -43,3 +43,5 @@ colorscheme wombat " I think this works on the airline bar also
 set nu " turn on line numbers by default
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 " set javascript to 2 spaces
 set tw=80 "text width
+nnoremap ; :
+nnoremap : ;

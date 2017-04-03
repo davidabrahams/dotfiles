@@ -19,7 +19,6 @@
 
 - `/pattern` search for `pattern`
 - `*`/`#` next/previous occurrence of word under cursor
-- `%` corresponding `(` `{` `[`
 
 #### Current line
 
@@ -30,3 +29,33 @@
 
 - `<C-r>` redo
 - `.` repeat last command
+
+## Zone selection
+
+`<action>a<object>` or `<action>i<object>`.
+
+`i` selects up to, `a` selects up to and including.
+``
+Possible actions are `y`, `d`, and `v` (to select).
+
+Possible objects are characters like `"`, ```, `)`, `}`, `]`, or `w`, `s`
+(sentence), `p` (paragraph).
+
+## Text objects
+
+Works in visual mode or after a command.
+
+Preface with `a` for "an", `i` for "inner".
+
+- `w` word
+- `s` sentence
+- `p` paragraph
+- `b` a `()` block
+- `B` a `{}` block
+- `>` a `<>` block
+
+## Commenting
+
+- `gcc` comment out a line
+- `gc` comment out selection in visual mode
+- `gcap` comment out a paragraph (use with other text objects too)
