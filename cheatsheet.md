@@ -16,10 +16,18 @@
 - `-` first non-blank character next line
 - `w`/`e` start of following/end of this word (letters and underscores)
 - `W`/`E` start of following/end of this Word (everything except white space)
+- `{`/`}` next/prev paragraph
+
+## Editing
+
+- `J` join line with below
+- `cc` change entire line
+- `D` delete to end of line
+- `p`/`P` paste/put before/after cursor.
 
 ## Finding matches
 
-- `/pattern` search for `pattern`
+- `/pattern` search for `pattern` (use `n`/`N` to go to next/previous match)
 - `*`/`#` next/previous occurrence of word under cursor
 
 #### Current line
@@ -35,6 +43,7 @@
 ## Visual Blocks
 
 - `<C-v>` enter visual block mode
+- `I'/'A' to insert/append at the beginning/end of a line
 
 ## Zone selection
 
@@ -78,3 +87,16 @@ After selecting text visually:
 - `>`/`<` indent to the left/right
 - `J` join lines together
 - `=` auto-indent
+
+## Screen movement / Scrolling
+
+- `C-d`/`C-u` scroll down/up half a page
+- `H` move top of screen
+- `M` move middle of screen
+- `L` move bottom of screen
+- `zt`/`zz`/`zb` move screen so cursor is at top/middle/bottom of screen
+
+## File I/O (using CtrlP)
+
+- `C-p` invole CtrlP
+- 
