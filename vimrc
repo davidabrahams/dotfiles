@@ -7,9 +7,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " Put all your Vundle plugins here. All of these are hosted on github
-Plugin 'Auto-Pairs' " autocomplete matching quotes and paren
+" Plugin 'Auto-Pairs' " autocomplete matching quotes and paren
 
-Plugin 'Valloric/YouCompleteMe' " Sweet autocompletion
+Plugin 'Valloric/YouCompleteMe' " Sweet autocompletion. To install: cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
 Plugin 'pangloss/vim-javascript' " javascript syntax and indentation
 Plugin 'scrooloose/syntastic' " support for all kinds of linters
 Plugin 'KevinGoodsell/vim-csexact' " allows colorschemes to appear accurately in a terminal
@@ -38,10 +38,11 @@ let g:syntastic_check_on_open=1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
 let g:hardtime_default_on = 1 "Enables hardtime by default
-colorscheme wombat " I think this works on the airline bar also
+colorscheme Tomorrow-Night " I think this works on the airline bar also
 " set completeopt-=preview " disable annoying preview window YouCompleteMe opens all the time
 set nu " turn on line numbers by default
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 " set javascript to 2 spaces
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown " enable markdown syntax highlighting
 set tw=80 "text width
 nnoremap ; :
 nnoremap : ;
