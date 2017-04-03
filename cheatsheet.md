@@ -38,7 +38,7 @@
 ``
 Possible actions are `y`, `d`, and `v` (to select).
 
-Possible objects are characters like `"`, `\``, `)`, `}`, `]`, or `w`, `s`
+Possible objects are characters like `"`, `` ` ``, `)`, `}`, `]`, or `w`, `s`
 (sentence), `p` (paragraph).
 
 ## Text objects
