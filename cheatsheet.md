@@ -3,9 +3,11 @@
 - `ZZ` Save + Quit
 - `:bn`/`bp` buffer next/previous
 
-## Modes
+## Insertion
 
 - `<C-[` exit insert mode
+- `i`/`a` insert/append
+- `I`/`A` insert beginning/append end
 
 ## Movement
 
@@ -30,6 +32,10 @@
 - `<C-r>` redo
 - `.` repeat last command
 
+## Visual Blocks
+
+- `<C-v>` enter visual block mode
+
 ## Zone selection
 
 `<action>a<object>` or `<action>i<object>`.
@@ -43,7 +49,7 @@ Possible objects are characters like `"`, `` ` ``, `)`, `}`, `]`, or `w`, `s`
 
 ## Text objects
 
-Works in visual mode or after a command.
+Works in visual-block mode or after a command.
 
 Preface with `a` for "an", `i` for "inner".
 
@@ -54,8 +60,21 @@ Preface with `a` for "an", `i` for "inner".
 - `B` a `{}` block
 - `>` a `<>` block
 
-## Commenting
+## Commenting (using vim-commentary)
 
 - `gcc` comment out a line
 - `gc` comment out selection in visual mode
 - `gcap` comment out a paragraph (use with other text objects too)
+
+## Macros
+
+- `qa` to enable, disable macro recording (optionally into register `a`)
+- `@@`/`@a` to run macros
+
+## Indenting
+
+After selecting text visually:
+
+- `>`/`<` indent to the left/right
+- `J` join lines together
+- `=` auto-indent
