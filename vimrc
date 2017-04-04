@@ -27,7 +27,6 @@ Plugin 'airblade/vim-gitgutter' " Vim git gutter
 " Plugin 'justinmk/vim-sneak' " This looks useful for when I actually become good at using vim.
 Plugin 'gioele/vim-autoswap' " If you try to open a file that's already open in vim, it'll just switch over to it! Requires wmctrl is installed.
 Plugin 'whatyouhide/vim-lengthmatters' " highlight lines that are too long
-Plugin 'dansomething/vim-eclim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -42,7 +41,8 @@ let g:hardtime_default_on = 1 "Enables hardtime by default
 colorscheme Tomorrow-Night " I think this works on the airline bar also
 " set completeopt-=preview " disable annoying preview window YouCompleteMe opens all the time
 set nu " turn on line numbers by default
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 " set javascript to 2 spaces
+autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 expandtab
+autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 expandtab
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown " enable markdown syntax highlighting
 set tw=80 "text width
 nnoremap ; :
