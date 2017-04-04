@@ -1,7 +1,6 @@
 ## Open/Close File
 
 - `ZZ` Save + Quit
-- `:bn`/`bp` buffer next/previous
 
 ## Insertion
 
