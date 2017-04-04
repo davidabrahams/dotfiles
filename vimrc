@@ -7,7 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " Put all your Vundle plugins here. All of these are hosted on github
-" Plugin 'Auto-Pairs' " autocomplete matching quotes and paren
+Plugin 'Auto-Pairs' " autocomplete matching quotes and paren
 
 Plugin 'Valloric/YouCompleteMe' " Sweet autocompletion. To install: cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
 Plugin 'pangloss/vim-javascript' " javascript syntax and indentation
@@ -27,6 +27,7 @@ Plugin 'airblade/vim-gitgutter' " Vim git gutter
 " Plugin 'justinmk/vim-sneak' " This looks useful for when I actually become good at using vim.
 Plugin 'gioele/vim-autoswap' " If you try to open a file that's already open in vim, it'll just switch over to it! Requires wmctrl is installed.
 Plugin 'whatyouhide/vim-lengthmatters' " highlight lines that are too long
+Plugin 'dansomething/vim-eclim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -48,3 +49,4 @@ nnoremap ; :
 nnoremap : ;
 set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
+let g:EclimCompletionMethod = 'omnifunc' " Integrated eclim with YouCompleteMe
