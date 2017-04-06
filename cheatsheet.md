@@ -4,15 +4,15 @@
 
 ## Insertion
 
-- `<C-[` exit insert mode
+- `<C-[>` exit insert mode
 - `i`/`a` insert/append
 - `I`/`A` insert beginning/append end of line
 
 ## Movement
 
 - `_` first non-blank character this line
-- `+` first non-blank character previous line
-- `-` first non-blank character next line
+- `-` first non-blank character previous line
+- `+` first non-blank character next line
 - `w`/`e` start of following/end of this word (letters and underscores)
 - `W`/`E` start of following/end of this Word (everything except white space)
 - `{`/`}` next/prev paragraph
