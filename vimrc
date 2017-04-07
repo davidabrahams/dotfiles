@@ -53,6 +53,7 @@ set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
 " let g:EclimCompletionMethod = 'omnifunc' " Integrated eclim with YouCompleteMe
 " let g:EclimFileTypeValidate = 0 " This makes eclim not do syntax highlighting, deferring to syntastic/YCM instead
+let g:syntastic_java_javac_config_file_enabled = 1
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
 autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown " enable markdown syntax highlighting
@@ -60,3 +61,4 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 set hlsearch " highlight words when you search for them
 "This unsets the "last search pattern" register by hitting return
 nnoremap <esc> :noh<return><esc>
+let g:rooter_patterns = ['.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '.idea/'] " Adding intellij base directories to vim rooter
