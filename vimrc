@@ -9,7 +9,6 @@ Plugin 'VundleVim/Vundle.vim'
 " Put all your Vundle plugins here. All of these are hosted on github
 Plugin 'Auto-Pairs' " autocomplete matching quotes and paren
 Plugin 'Valloric/YouCompleteMe' " Sweet autocompletion. To install: cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
-" let g:ycm_show_diagnostics_ui = 0 " I don't want YCM to be the checker. This makes YCM play nice with syntastic
 Plugin 'pangloss/vim-javascript' " javascript syntax and indentation
 Plugin 'scrooloose/syntastic' " support for all kinds of linters
 Plugin 'KevinGoodsell/vim-csexact' " allows colorschemes to appear accurately in a terminal
@@ -20,13 +19,17 @@ Plugin 'tpope/vim-surround' " Makes it easy to modify matching brackets
 Plugin 'vim-airline/vim-airline' " cool status bar
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'takac/vim-hardtime' " forcing myself to actually learn to use vim
-let g:hardtime_maxcount = 5 " Only allowed to use 3 of hjkl per second. I'm forcing myself to use vim :(
+let g:hardtime_maxcount = 7 " Only allowed to use 3 of hjkl per second. I'm forcing myself to use vim :(
 set laststatus=2 " airline status bar always on
 Plugin 'tpope/vim-commentary' " Allow quick commenting of lines
 Plugin 'airblade/vim-gitgutter' " Vim git gutter
+Plugin 'artur-shaik/vim-javacomplete2' " Java autocomplete
+Plugin 'tpope/vim-unimpaired' " Some useful key bindings
 " Plugin 'justinmk/vim-sneak' " This looks useful for when I actually become good at using vim.
 Plugin 'gioele/vim-autoswap' " If you try to open a file that's already open in vim, it'll just switch over to it! Requires wmctrl is installed.
+Plugin 'airblade/vim-rooter'
 Plugin 'whatyouhide/vim-lengthmatters' " highlight lines that are too long
+Plugin 'Yggdroot/indentLine'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -48,11 +51,12 @@ nnoremap ; :
 nnoremap : ;
 set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
-let g:EclimCompletionMethod = 'omnifunc' " Integrated eclim with YouCompleteMe
-let g:EclimFileTypeValidate = 0 " This makes eclim not do syntax highlighting, deferring to syntastic/YCM instead
-autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 expandtab
+" let g:EclimCompletionMethod = 'omnifunc' " Integrated eclim with YouCompleteMe
+" let g:EclimFileTypeValidate = 0 " This makes eclim not do syntax highlighting, deferring to syntastic/YCM instead
+autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
 autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown " enable markdown syntax highlighting
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 set hlsearch " highlight words when you search for them
 "This unsets the "last search pattern" register by hitting return
-nnoremap <CR> :noh<CR><CR>
+nnoremap <esc> :noh<return><esc>

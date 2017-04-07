@@ -23,6 +23,8 @@
 - `cc` change entire line
 - `D` delete to end of line
 - `p`/`P` paste/put before/after cursor.
+- `[<Space>`/`]<Space>` add space before line (vim-unimpaired)
+- `[e`/`]e` exchange line with line before/after it (vim-unimpaired)
 
 ## Finding matches
 
