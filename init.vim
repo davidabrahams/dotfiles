@@ -1,8 +1,8 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'Raimondi/delimitMate' " autocomplete matching quotes and paren
-Plug 'Valloric/YouCompleteMe' " Sweet autocompletion. To install: cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' } " Sweet autocompletion. To install: cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
 Plug 'pangloss/vim-javascript' " javascript syntax and indentation
-Plug 'scrooloose/syntastic' " support for all kinds of linters
+" Plug 'scrooloose/syntastic' " support for all kinds of linters
 Plug 'KevinGoodsell/vim-csexact' " allows colorschemes to appear accurately in a terminal
 Plug 'flazz/vim-colorschemes' " lots of colorschemes
 Plug 'ctrlpvim/ctrlp.vim' " it seems likes this is more commonly used than command-t
@@ -21,16 +21,21 @@ Plug 'tpope/vim-unimpaired' " Some useful key bindings
 Plug 'gioele/vim-autoswap' " If you try to open a file that's already open in vim, it'll just switch over to it! Requires wmctrl is installed.
 Plug 'airblade/vim-rooter'
 Plug 'whatyouhide/vim-lengthmatters' " highlight lines that are too long
+Plug 'neomake/neomake' " Async linting
 Plug 'Yggdroot/indentLine'
 call plug#end()
+
+autocmd InsertChange,TextChanged * update | Neomake
 
 " End Vundle configuration
 " This is all of my customization
 
 " Some javascript linting stuff. Requires eslint_d is installed.
-let g:syntastic_check_on_open=1
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec = 'eslint_d'
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_eslint_exec = 'eslint_d'
+" let g:syntastic_check_on_open=1
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_eslint_exec = 'eslint_d'
 " let g:syntastic_cpp_checkers = ['cpplint']
 " let g:syntastic_cpp_cpplint_exec = 'cpplint' " use cpplint for C++ linting. sudo pip install cpplint
 let g:hardtime_default_on = 1 "Enables hardtime by default
@@ -42,9 +47,7 @@ nnoremap ; :
 nnoremap : ;
 set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
-" let g:EclimCompletionMethod = 'omnifunc' " Integrated eclim with YouCompleteMe
-" let g:EclimFileTypeValidate = 0 " This makes eclim not do syntax highlighting, deferring to syntastic/YCM instead
-let g:syntastic_java_javac_config_file_enabled = 1
+" let g:syntastic_java_javac_config_file_enabled = 1
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
 autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown " enable markdown syntax highlighting
