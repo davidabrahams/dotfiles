@@ -23,9 +23,10 @@ Plug 'airblade/vim-rooter'
 Plug 'whatyouhide/vim-lengthmatters' " highlight lines that are too long
 Plug 'neomake/neomake' " Async linting
 Plug 'Yggdroot/indentLine'
+Plug 'Vimjas/vim-python-pep8-indent'
 call plug#end()
 
-autocmd InsertChange,TextChanged * update | Neomake
+autocmd BufWritePost,BufEnter * Neomake
 
 " End Vundle configuration
 " This is all of my customization
@@ -33,6 +34,7 @@ autocmd InsertChange,TextChanged * update | Neomake
 " Some javascript linting stuff. Requires eslint_d is installed.
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_javascript_eslint_exec = 'eslint_d'
+let g:neomake_python_enabled_makers = ['flake8']
 " let g:syntastic_check_on_open=1
 " let g:syntastic_javascript_checkers = ['eslint']
 " let g:syntastic_javascript_eslint_exec = 'eslint_d'
@@ -40,7 +42,8 @@ let g:neomake_javascript_eslint_exec = 'eslint_d'
 " let g:syntastic_cpp_cpplint_exec = 'cpplint' " use cpplint for C++ linting. sudo pip install cpplint
 let g:hardtime_default_on = 1 "Enables hardtime by default
 colorscheme Tomorrow-Night " I think this works on the airline bar also
-set completeopt-=preview " disable annoying preview window YouCompleteMe opens all the time
+" set completeopt-=preview " disable annoying preview window YouCompleteMe opens all the time
+let g:ycm_autoclose_preview_window_after_completion=1 " get rid of YCM window after autocomplete is done
 set nu " turn on line numbers by default
 set tw=80 "text width
 nnoremap ; :
@@ -52,7 +55,7 @@ autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
 autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown " enable markdown syntax highlighting
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
-set hlsearch " highlight words when you search for them
+" set hlsearch " highlight words when you search for them
 "This unsets the "last search pattern" register by hitting return
 nnoremap <esc> :noh<return><esc>
 let g:rooter_patterns = ['.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '.idea/'] " Adding intellij base directories to vim rooter
