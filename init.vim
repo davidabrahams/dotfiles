@@ -14,6 +14,7 @@ Plug 'takac/vim-hardtime' " forcing myself to actually learn to use vim
 let g:hardtime_maxcount = 7 " Only allowed to use 3 of hjkl per second. I'm forcing myself to use vim :(
 set laststatus=2 " airline status bar always on
 Plug 'tpope/vim-commentary' " Allow quick commenting of lines
+Plug 'tpope/vim-repeat' " integrates . command with plugin commands
 Plug 'airblade/vim-gitgutter' " Vim git gutter
 Plug 'artur-shaik/vim-javacomplete2' " Java autocomplete
 Plug 'tpope/vim-unimpaired' " Some useful key bindings
