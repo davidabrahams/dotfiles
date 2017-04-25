@@ -45,7 +45,6 @@ let g:hardtime_default_on = 1 "Enables hardtime by default
 colorscheme Tomorrow-Night " I think this works on the airline bar also
 " set completeopt-=preview " disable annoying preview window YouCompleteMe opens all the time
 let g:ycm_autoclose_preview_window_after_completion=1 " get rid of YCM window after autocomplete is done
-set nu " turn on line numbers by default
 set tw=80 "text width
 nnoremap ; :
 nnoremap : ;
@@ -56,7 +55,41 @@ autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
 autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown " enable markdown syntax highlighting
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
-" set hlsearch " highlight words when you search for them
-"This unsets the "last search pattern" register by hitting return
-nnoremap <esc> :noh<return><esc>
 let g:rooter_patterns = ['.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '.idea/'] " Adding intellij base directories to vim rooter
+
+" autocmd InsertEnter * :call EndHighlight()
+
+" map n :call RepeatLastSearch()<CR>
+
+" function EndHighlight()
+"     match
+"     let s:lastsearch = @/
+"     nohlsearch
+"     redraw
+" endfunction
+
+" function RepeatLastSearch()
+"     exe "match Search /".s:lastsearch."/"
+"     call search(s:lastsearch, "W")
+" endfunction
+
+autocmd FocusLost * set norelativenumber number 
+autocmd FocusGained * set nonumber relativenumber 
+
+autocmd InsertEnter * set norelativenumber number 
+autocmd InsertLeave * set nonumber relativenumber 
+
+" Toggle relative line numbers using <C-n>
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber
+    set number
+  else
+    set nonumber
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
+
+nnoremap <esc> :noh<return><esc>
