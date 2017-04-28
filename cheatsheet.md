@@ -16,6 +16,8 @@
 - `w`/`e` start of following/end of this word (letters and underscores)
 - `W`/`E` start of following/end of this Word (everything except white space)
 - `{`/`}` next/prev paragraph
+- `<C-o>`/`<C-i>` navigate cursor position history
+- `g;`/`g,` older/newer position in change list
 
 ## Editing
 
