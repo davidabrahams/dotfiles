@@ -31,7 +31,6 @@ autocmd BufWritePost,BufEnter * Neomake
 
 " End Vundle configuration
 " This is all of my customization
-
 " Some javascript linting stuff. Requires eslint_d is installed.
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_javascript_eslint_exec = 'eslint_d'
@@ -73,11 +72,11 @@ let g:rooter_patterns = ['.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '
 "     call search(s:lastsearch, "W")
 " endfunction
 
-autocmd FocusLost * set norelativenumber number 
-autocmd FocusGained * set nonumber relativenumber 
+autocmd FocusLost * set norelativenumber
+autocmd FocusGained * set relativenumber
 
-autocmd InsertEnter * set norelativenumber number 
-autocmd InsertLeave * set nonumber relativenumber 
+autocmd InsertEnter * set norelativenumber
+autocmd InsertLeave * set relativenumber
 
 " Toggle relative line numbers using <C-n>
 function! NumberToggle()
@@ -93,3 +92,5 @@ endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
 
 nnoremap <esc> :noh<return><esc>
+
+set nu
