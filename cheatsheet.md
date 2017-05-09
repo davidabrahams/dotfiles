@@ -7,6 +7,7 @@
 - `<C-[>` exit insert mode
 - `i`/`a` insert/append
 - `I`/`A` insert beginning/append end of line
+- `gi` insert where you previous left off inserting
 
 ## Movement
 
