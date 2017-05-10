@@ -78,5 +78,6 @@ nnoremap <C-n> :call NumberToggle()<cr>
 
 " nnoremap <esc> :noh<return><esc>
 
+set relativenumber
 set nu
 set numberwidth=2
