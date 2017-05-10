@@ -6,7 +6,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 Plug 'Raimondi/delimitMate' " autocomplete matching quotes and paren
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' } " Sweet autocompletion. To install: cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
 Plug 'pangloss/vim-javascript' " javascript syntax and indentation
@@ -43,42 +43,19 @@ autocmd BufWritePost,BufEnter * Neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_javascript_eslint_exec = 'eslint_d'
 let g:neomake_python_enabled_makers = ['flake8']
-" let g:syntastic_check_on_open=1
-" let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_javascript_eslint_exec = 'eslint_d'
-" let g:syntastic_cpp_checkers = ['cpplint']
-" let g:syntastic_cpp_cpplint_exec = 'cpplint' " use cpplint for C++ linting. sudo pip install cpplint
 let g:hardtime_default_on = 1 "Enables hardtime by default
 colorscheme Tomorrow-Night " I think this works on the airline bar also
-" set completeopt-=preview " disable annoying preview window YouCompleteMe opens all the time
 let g:ycm_autoclose_preview_window_after_completion=1 " get rid of YCM window after autocomplete is done
 set tw=80 "text width
 nnoremap ; :
 nnoremap : ;
 set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
-" let g:syntastic_java_javac_config_file_enabled = 1
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
 autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown " enable markdown syntax highlighting
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 let g:rooter_patterns = ['.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '.idea/'] " Adding intellij base directories to vim rooter
-
-" autocmd InsertEnter * :call EndHighlight()
-
-" map n :call RepeatLastSearch()<CR>
-
-" function EndHighlight()
-"     match
-"     let s:lastsearch = @/
-"     nohlsearch
-"     redraw
-" endfunction
-
-" function RepeatLastSearch()
-"     exe "match Search /".s:lastsearch."/"
-"     call search(s:lastsearch, "W")
-" endfunction
 
 autocmd FocusLost * set norelativenumber
 autocmd FocusGained * set relativenumber
