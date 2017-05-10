@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# wget https://github.com/davidabrahams/dotfiles/raw/master/setup && bash setup
+
 sudo apt-get install git
 sudo apt-get install vim
 sudo apt-get install build-essential cmake
@@ -14,8 +16,7 @@ sudo npm install -g eslint_d
 sudo npm install -g babel-eslint
 sudo npm install -g eslint-plugin-react
 sudo npm install -g eslint-config-airbnb-es5
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
-chsh -s `which zsh`
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh && chsh -s `which zsh`
 cd $HOME
 mkdir -p Repos && cd Repos
 rm -rf dotfiles
