@@ -23,8 +23,6 @@ wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 cd $HOME
-mkdir -p Repos && cd Repos
-rm -rf dotfiles
-git clone git@github.com:davidabrahams/dotfiles.git
-bash dotfiles/distribute
+wget https://github.com/davidabrahams/dotfiles/raw/master/.vimrc
+https://github.com/davidabrahams/dotfiles/raw/master/.zshrc
 vim +PlugInstall
