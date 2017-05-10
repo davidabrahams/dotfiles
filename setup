@@ -2,15 +2,15 @@
 
 # wget https://github.com/davidabrahams/dotfiles/raw/master/setup && bash setup
 
-sudo apt-get install git
-sudo apt-get install vim
-sudo apt-get install build-essential cmake
-sudo apt-get install python-dev python3-dev
-sudo apt-get install zsh
-sudo apt-get install git-core
-sudo apt-get install nodejs
-sudo apt-get install npm
-sudo apt-get install nodejs-legacy
+sudo apt-get -y install git
+sudo apt-get -y install vim
+sudo apt-get -y install build-essential cmake
+sudo apt-get -y install python-dev python3-dev
+sudo apt-get -y install zsh
+sudo apt-get -y install git-core
+sudo apt-get -y install nodejs
+sudo apt-get -y install npm
+sudo apt-get -y install nodejs-legacy
 sudo npm install -g eslint
 sudo npm install -g eslint_d
 sudo npm install -g babel-eslint
