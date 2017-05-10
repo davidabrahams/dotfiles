@@ -22,7 +22,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 cd $HOME
 wget https://github.com/davidabrahams/dotfiles/raw/master/.vimrc
-wget https://github.com/davidabrahams/dotfiles/raw/master/.zshrc
+rm .zshrc && wget https://github.com/davidabrahams/dotfiles/raw/master/.zshrc
 vim +PlugInstall
 
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh && chsh -s `which zsh`
