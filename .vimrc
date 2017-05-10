@@ -76,7 +76,7 @@ endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
 
-nnoremap <esc> :noh<return><esc>
+" nnoremap <esc> :noh<return><esc>
 
 set nu
 set numberwidth=2
