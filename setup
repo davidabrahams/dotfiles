@@ -18,11 +18,12 @@ sudo npm install -g babel-eslint
 sudo npm install -g eslint-plugin-react
 sudo npm install -g eslint-config-airbnb-es5
 
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh && chsh -s `which zsh`
-
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 cd $HOME
 wget https://github.com/davidabrahams/dotfiles/raw/master/.vimrc
-https://github.com/davidabrahams/dotfiles/raw/master/.zshrc
+wget https://github.com/davidabrahams/dotfiles/raw/master/.zshrc
 vim +PlugInstall
+
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh && chsh -s `which zsh`
+sudo shutdown -r 0
