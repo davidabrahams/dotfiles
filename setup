@@ -21,6 +21,8 @@ sudo npm install -g babel-eslint
 sudo npm install -g eslint-plugin-react
 sudo npm install -g eslint-config-airbnb-es5
 
+echo '{"extends": "eslint-config-airbnb-es5"}' > $HOME/.eslintrc
+
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 cd $HOME
