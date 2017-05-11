@@ -41,7 +41,7 @@ autocmd BufWritePost,BufEnter * Neomake
 " This is all of my customization
 " Some javascript linting stuff. Requires eslint_d is installed.
 let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_javascript_eslint_exec = 'eslint_d'
+let g:neomake_javascript_eslint_exe = 'eslint_d'
 let g:neomake_python_enabled_makers = ['flake8']
 let g:hardtime_default_on = 1 "Enables hardtime by default
 colorscheme Tomorrow-Night " I think this works on the airline bar also
