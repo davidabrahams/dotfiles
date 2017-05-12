@@ -37,7 +37,7 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_javascript_eslint_exe = 'eslint_d'
 let g:neomake_python_enabled_makers = ['flake8']
 let g:hardtime_default_on = 1 "Enables hardtime by default
-colorscheme Tomorrow-Night " I think this works on the airline bar also
+colorscheme apprentice " I think this works on the airline bar also
 let g:ycm_autoclose_preview_window_after_completion=1 " get rid of YCM window after autocomplete is done
 set tw=80 "text width
 " nnoremap ; :
