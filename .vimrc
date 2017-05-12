@@ -18,7 +18,8 @@ Plug 'tpope/vim-repeat' " integrates . command with plugin commands
 Plug 'airblade/vim-gitgutter' " Vim git gutter
 Plug 'artur-shaik/vim-javacomplete2' " Java autocomplete
 Plug 'tpope/vim-unimpaired' " Some useful key bindings
-" Plug 'justinmk/vim-sneak' " This looks useful for when I actually become good at using vim.
+Plug 'justinmk/vim-sneak' " This looks useful for when I actually become good at using vim.
+" let g:sneak#label = 1
 Plug 'gioele/vim-autoswap' " If you try to open a file that's already open in vim, it'll just switch over to it! Requires wmctrl is installed.
 Plug 'airblade/vim-rooter'
 Plug 'whatyouhide/vim-lengthmatters' " highlight lines that are too long
@@ -39,8 +40,8 @@ let g:hardtime_default_on = 1 "Enables hardtime by default
 colorscheme Tomorrow-Night " I think this works on the airline bar also
 let g:ycm_autoclose_preview_window_after_completion=1 " get rid of YCM window after autocomplete is done
 set tw=80 "text width
-nnoremap ; :
-nnoremap : ;
+" nnoremap ; :
+" nnoremap : ;
 set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
