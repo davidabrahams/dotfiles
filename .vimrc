@@ -3,7 +3,7 @@ Plug 'Raimondi/delimitMate' " autocomplete matching quotes and paren
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer --clang-completer' } " Sweet autocompletion. To install: cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
 Plug 'pangloss/vim-javascript' " javascript syntax and indentation
 " Plug 'scrooloose/syntastic' " support for all kinds of linters
-Plug 'KevinGoodsell/vim-csexact' " allows colorschemes to appear accurately in a terminal
+" Plug 'KevinGoodsell/vim-csexact' " allows colorschemes to appear accurately in a terminal
 Plug 'flazz/vim-colorschemes' " lots of colorschemes
 Plug 'ctrlpvim/ctrlp.vim' " it seems likes this is more commonly used than command-t
 let g:ctrlp_map = '<c-p>' " actually open ctrlp with <c-p>
