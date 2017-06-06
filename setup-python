@@ -1,4 +1,5 @@
 #!/bin/bash
 sudo apt-get -y install python-dev python3-dev python-pip build-essential
 sudo pip install --upgrade pip
+sudo pip install virtualenv
 sudo pip install flake8
