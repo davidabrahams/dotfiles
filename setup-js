@@ -1,0 +1,14 @@
+#!/bin/bash
+
+sudo apt-get -y install nodejs
+sudo apt-get -y install npm
+sudo apt-get -y install nodejs-legacy
+
+sudo npm install -g eslint
+sudo npm install -g eslint_d
+sudo npm install -g babel-eslint
+sudo npm install -g eslint-plugin-react
+sudo npm install -g eslint-config-airbnb-es5
+
+cd $HOME
+wget https://github.com/davidabrahams/dotfiles/raw/master/.eslintrc
