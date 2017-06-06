@@ -1,0 +1,2 @@
+
+echo "\n[device]\nwifi.scan-rand-mac-address=no" | sudo tee --append /etc/NetworkManager/NetworkManager.conf
