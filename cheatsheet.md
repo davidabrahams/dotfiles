@@ -28,6 +28,7 @@
 - `p`/`P` paste/put before/after cursor.
 - `[<Space>`/`]<Space>` add space before line (vim-unimpaired)
 - `[e`/`]e` exchange line with line before/after it (vim-unimpaired)
+- `gq` format selection
 
 ## Finding matches
 
