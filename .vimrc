@@ -50,7 +50,7 @@ autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab omnif
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown " enable markdown syntax highlighting
 autocmd FileType python setlocal tw=79
 " Make F9 execute python scripts
-autocmd FileType python nnoremap <buffer> <F9> :exec 'w !python' shellescape(@%, 1)<cr>
+autocmd FileType python nnoremap <buffer> <F9> :w<cr> :exec '!clear; python' shellescape(@%, 1)<cr>
 let g:rooter_patterns = ['.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '.idea/'] " Adding intellij base directories to vim rooter
 
 autocmd FocusLost * set norelativenumber
