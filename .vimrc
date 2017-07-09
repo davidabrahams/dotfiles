@@ -34,7 +34,8 @@ autocmd BufWritePost,BufEnter * Neomake
 " This is all of my customization
 " Some javascript linting stuff. Requires eslint_d is installed.
 let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_javascript_eslint_exe = 'eslint_d'
+" let g:neomake_javascript_eslint_exe = 'eslint_d'
+let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint' " TODO: change this to vim's working directory, not the system's.
 let g:neomake_python_enabled_makers = ['flake8']
 let g:hardtime_default_on = 1 "Enables hardtime by default
 colorscheme apprentice " I think this works on the airline bar also
