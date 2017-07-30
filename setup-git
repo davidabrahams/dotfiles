@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt-get -y install git
+sudo apt-get -y install git git-core
 
 git config --global user.email "david.abrahams@students.olin.edu"
 git config --global user.name "David Abrahams"
