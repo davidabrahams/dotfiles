@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'Raimondi/delimitMate' " autocomplete matching quotes and paren
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer --clang-completer' } " Sweet autocompletion. To install: cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' } " Sweet autocompletion. To install: cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
 Plug 'pangloss/vim-javascript' " javascript syntax and indentation
 " Plug 'scrooloose/syntastic' " support for all kinds of linters
 " Plug 'KevinGoodsell/vim-csexact' " allows colorschemes to appear accurately in a terminal
