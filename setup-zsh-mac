@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh 
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | zsh 
 cd $HOME
 rm .zshrc && curl -L https://github.com/davidabrahams/dotfiles/raw/master/.zshrc
 sudo git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
