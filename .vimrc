@@ -15,6 +15,7 @@ let g:hardtime_maxcount = 7 " Only allowed to use 3 of hjkl per second. I'm forc
 set laststatus=2 " airline status bar always on
 Plug 'tpope/vim-commentary' " Allow quick commenting of lines
 Plug 'tpope/vim-repeat' " integrates . command with plugin commands
+Plug 'tpope/vim-markdown' " markdown!
 Plug 'airblade/vim-gitgutter' " Vim git gutter
 Plug 'artur-shaik/vim-javacomplete2' " Java autocomplete
 Plug 'tpope/vim-unimpaired' " Some useful key bindings
@@ -40,7 +41,6 @@ let g:neomake_python_enabled_makers = ['flake8']
 let g:hardtime_default_on = 1 "Enables hardtime by default
 colorscheme apprentice " I think this works on the airline bar also
 let g:ycm_autoclose_preview_window_after_completion=1 " get rid of YCM window after autocomplete is done
-set tw=80 "text width
 set incsearch
 nnoremap ; :
 nnoremap : ;
@@ -48,7 +48,6 @@ set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
 autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab omnifunc=javacomplete#Complete
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown " enable markdown syntax highlighting
 autocmd FileType python setlocal tw=79
 " Make F9 execute python scripts
 autocmd FileType python nnoremap <buffer> <F9> :w<cr> :exec '!clear; python' shellescape(@%, 1)<cr>
