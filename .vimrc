@@ -27,6 +27,7 @@ Plug 'whatyouhide/vim-lengthmatters' " highlight lines that are too long
 Plug 'neomake/neomake' " Async linting
 Plug 'Yggdroot/indentLine'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'JamshedVesuna/vim-markdown-preview'
 call plug#end()
 
 autocmd BufWritePost,BufEnter * Neomake
