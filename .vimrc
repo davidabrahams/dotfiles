@@ -24,6 +24,7 @@ Plug 'tpope/vim-unimpaired' " Some useful key bindings
 Plug 'gioele/vim-autoswap' " If you try to open a file that's already open in vim, it'll just switch over to it! Requires wmctrl is installed.
 Plug 'airblade/vim-rooter'
 Plug 'whatyouhide/vim-lengthmatters' " highlight lines that are too long
+let g:lengthmatters_excluded = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'nerdtree', 'help', 'qf', 'dirvish', 'markdown']
 Plug 'neomake/neomake' " Async linting
 Plug 'Yggdroot/indentLine'
 Plug 'Vimjas/vim-python-pep8-indent'
