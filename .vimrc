@@ -10,8 +10,8 @@ let g:ctrlp_map = '<c-p>' " actually open ctrlp with <c-p>
 Plug 'tpope/vim-surround' " Makes it easy to modify matching brackets
 Plug 'vim-airline/vim-airline' " cool status bar
 Plug 'vim-airline/vim-airline-themes'
-Plug 'takac/vim-hardtime' " forcing myself to actually learn to use vim
-let g:hardtime_maxcount = 7 " Only allowed to use 3 of hjkl per second. I'm forcing myself to use vim :(
+" Plug 'takac/vim-hardtime' " forcing myself to actually learn to use vim
+" let g:hardtime_maxcount = 7 " Only allowed to use 3 of hjkl per second. I'm forcing myself to use vim :(
 set laststatus=2 " airline status bar always on
 Plug 'tpope/vim-commentary' " Allow quick commenting of lines
 Plug 'tpope/vim-repeat' " integrates . command with plugin commands
