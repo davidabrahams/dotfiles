@@ -28,6 +28,7 @@ Plug 'neomake/neomake' " Async linting
 Plug 'Yggdroot/indentLine'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'JamshedVesuna/vim-markdown-preview'
+let vim_markdown_preview_hotkey='<C-m>'
 call plug#end()
 
 autocmd BufWritePost,BufEnter * Neomake
