@@ -10,8 +10,8 @@ let g:ctrlp_map = '<c-p>' " actually open ctrlp with <c-p>
 Plug 'tpope/vim-surround' " Makes it easy to modify matching brackets
 Plug 'vim-airline/vim-airline' " cool status bar
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'takac/vim-hardtime' " forcing myself to actually learn to use vim
-" let g:hardtime_maxcount = 7 " Only allowed to use 3 of hjkl per second. I'm forcing myself to use vim :(
+Plug 'takac/vim-hardtime' " forcing myself to actually learn to use vim
+let g:hardtime_maxcount = 7 " Only allowed to use 3 of hjkl per second. I'm forcing myself to use vim :(
 set laststatus=2 " airline status bar always on
 Plug 'tpope/vim-commentary' " Allow quick commenting of lines
 Plug 'tpope/vim-repeat' " integrates . command with plugin commands
@@ -41,7 +41,7 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 " let g:neomake_javascript_eslint_exe = 'eslint_d'
 let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint' " TODO: change this to vim's working directory, not the system's.
 let g:neomake_python_enabled_makers = ['flake8']
-let g:hardtime_default_on = 1 "Enables hardtime by default
+" let g:hardtime_default_on = 1 "Enables hardtime by default
 colorscheme apprentice " I think this works on the airline bar also
 let g:ycm_autoclose_preview_window_after_completion=1 " get rid of YCM window after autocomplete is done
 set incsearch
