@@ -2,9 +2,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'Raimondi/delimitMate' " autocomplete matching quotes and paren
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' } " Sweet autocompletion. To install: cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
 Plug 'pangloss/vim-javascript' " javascript syntax and indentation
-" Plug 'scrooloose/syntastic' " support for all kinds of linters
-" Plug 'KevinGoodsell/vim-csexact' " allows colorschemes to appear accurately in a terminal
 Plug 'flazz/vim-colorschemes' " lots of colorschemes
+set termguicolors
+set background=dark
 Plug 'ctrlpvim/ctrlp.vim' " it seems likes this is more commonly used than command-t
 let g:ctrlp_map = '<c-p>' " actually open ctrlp with <c-p>
 Plug 'tpope/vim-surround' " Makes it easy to modify matching brackets
@@ -42,7 +42,7 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint' " TODO: change this to vim's working directory, not the system's.
 let g:neomake_python_enabled_makers = ['flake8']
 " let g:hardtime_default_on = 1 "Enables hardtime by default
-colorscheme apprentice " I think this works on the airline bar also
+colorscheme gruvbox " I think this works on the airline bar also
 let g:ycm_autoclose_preview_window_after_completion=1 " get rid of YCM window after autocomplete is done
 set incsearch
 nnoremap ; :
