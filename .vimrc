@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-Plug 'Raimondi/delimitMate' " autocomplete matching quotes and paren
+Plug 'jiangmiao/auto-pairs' " autocomplete matching quotes and paren
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' } " Sweet autocompletion. To install: cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
 Plug 'pangloss/vim-javascript' " javascript syntax and indentation
 Plug 'flazz/vim-colorschemes' " lots of colorschemes
@@ -9,9 +9,6 @@ Plug 'ctrlpvim/ctrlp.vim' " it seems likes this is more commonly used than comma
 let g:ctrlp_map = '<c-p>' " actually open ctrlp with <c-p>
 Plug 'tpope/vim-surround' " Makes it easy to modify matching brackets
 Plug 'vim-airline/vim-airline' " cool status bar
-Plug 'vim-airline/vim-airline-themes'
-Plug 'takac/vim-hardtime' " forcing myself to actually learn to use vim
-let g:hardtime_maxcount = 7 " Only allowed to use 3 of hjkl per second. I'm forcing myself to use vim :(
 set laststatus=2 " airline status bar always on
 Plug 'tpope/vim-commentary' " Allow quick commenting of lines
 Plug 'tpope/vim-repeat' " integrates . command with plugin commands
