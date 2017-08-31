@@ -19,6 +19,7 @@
 - `{`/`}` next/prev paragraph
 - `<C-o>`/`<C-i>` navigate cursor position history
 - `g;`/`g,` older/newer position in change list
+- `[{`/`]}` jump to start/end of function definition (wrapped in `{}`. Works with `[]` too.)
 
 ## Editing
 
