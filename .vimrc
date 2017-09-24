@@ -12,21 +12,17 @@ Plug 'vim-airline/vim-airline' " cool status bar
 set laststatus=2 " airline status bar always on
 Plug 'tpope/vim-commentary' " Allow quick commenting of lines
 Plug 'tpope/vim-repeat' " integrates . command with plugin commands
-Plug 'tpope/vim-markdown' " markdown!
 Plug 'airblade/vim-gitgutter' " Vim git gutter
 Plug 'artur-shaik/vim-javacomplete2' " Java autocomplete
 Plug 'tpope/vim-unimpaired' " Some useful key bindings
 " Plug 'justinmk/vim-sneak' " This looks useful for when I actually become good at using vim.
 " let g:sneak#label = 1
-Plug 'gioele/vim-autoswap' " If you try to open a file that's already open in vim, it'll just switch over to it! Requires wmctrl is installed.
 Plug 'airblade/vim-rooter'
 Plug 'whatyouhide/vim-lengthmatters' " highlight lines that are too long
 let g:lengthmatters_excluded = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'nerdtree', 'help', 'qf', 'dirvish', 'markdown']
 Plug 'neomake/neomake' " Async linting
 Plug 'Yggdroot/indentLine'
 Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'JamshedVesuna/vim-markdown-preview'
-let vim_markdown_preview_hotkey='<C-m>'
 call plug#end()
 
 autocmd BufWritePost,BufEnter * Neomake
@@ -35,7 +31,6 @@ autocmd BufWritePost,BufEnter * Neomake
 " This is all of my customization
 " Some javascript linting stuff. Requires eslint_d is installed.
 let g:neomake_javascript_enabled_makers = ['eslint']
-" let g:neomake_javascript_eslint_exe = 'eslint_d'
 let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint' " TODO: change this to vim's working directory, not the system's.
 let g:neomake_python_enabled_makers = ['flake8']
 " let g:hardtime_default_on = 1 "Enables hardtime by default
@@ -51,8 +46,6 @@ autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab omnif
 autocmd FileType python setlocal tw=79
 " Make F9 execute python scripts
 autocmd FileType python nnoremap <buffer> <F9> :w<cr> :exec '!clear; python' shellescape(@%, 1)<cr>
-autocmd FileType markdown setlocal spell
-autocmd FileType markdown setlocal conceallevel=0
 let g:rooter_patterns = ['.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '.idea/'] " Adding intellij base directories to vim rooter
 
 autocmd FocusLost * set norelativenumber
