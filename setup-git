@@ -4,6 +4,7 @@ sudo apt-get -y install git git-core
 git config --global user.email "david.abrahams@students.olin.edu"
 git config --global user.name "David Abrahams"
 
-
 git config --global core.editor "vi"
 git config --global push.default "current"
+
+ssh-keygen -t rsa -b 4096 -C "david.abrahams@students.olin.edu"
