@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs' " autocomplete matching quotes and paren
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' } " Sweet autocompletion. To install: cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
 Plug 'pangloss/vim-javascript' " javascript syntax and indentation
+let g:javascript_plugin_jsdoc = 1
 Plug 'flazz/vim-colorschemes' " lots of colorschemes
 set termguicolors
 set background=dark
