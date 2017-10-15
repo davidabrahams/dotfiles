@@ -44,8 +44,10 @@ let g:neomake_python_enabled_makers = ['flake8']
 colorscheme gruvbox " I think this works on the airline bar also
 let g:ycm_autoclose_preview_window_after_completion=1 " get rid of YCM window after autocomplete is done
 set incsearch
-nnoremap ; :
-nnoremap : ;
+noremap ; :
+noremap : ;
+nnoremap j gj
+nnoremap k gk
 set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
