@@ -48,6 +48,7 @@ noremap ; :
 noremap : ;
 nnoremap j gj
 nnoremap k gk
+inoremap jj <Esc>
 set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
