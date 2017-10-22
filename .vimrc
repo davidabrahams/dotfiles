@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs' " autocomplete matching quotes and paren
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' } " Sweet autocompletion. To install: cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' } " Sweet autocompletion.
 Plug 'pangloss/vim-javascript' " javascript syntax and indentation
 let g:javascript_plugin_jsdoc = 1
 Plug 'heavenshell/vim-jsdoc' " automatically generate JSDocs
@@ -27,20 +27,20 @@ Plug 'tpope/vim-unimpaired' " Some useful key bindings
 Plug 'airblade/vim-rooter'
 Plug 'whatyouhide/vim-lengthmatters' " highlight lines that are too long
 let g:lengthmatters_excluded = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'nerdtree', 'help', 'qf', 'dirvish', 'markdown']
-Plug 'neomake/neomake' " Async linting
+Plug 'w0rp/ale' " Async linting
+let g:ale_linters = {'javascript': ['eslint']}
+" Auto fix javascript code on save
+let g:ale_fixers = {'javascript': ['eslint']}
+let g:ale_fix_on_save = 1
+" Jump to previous and next error with j/k
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 Plug 'Yggdroot/indentLine'
 Plug 'Vimjas/vim-python-pep8-indent'
 call plug#end()
 
-autocmd BufWritePost,BufEnter * Neomake
-
-" End Vundle configuration
+" End plugged configuration
 " This is all of my customization
-" Some javascript linting stuff. Requires eslint_d is installed.
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint' " TODO: change this to vim's working directory, not the system's.
-let g:neomake_python_enabled_makers = ['flake8']
-" let g:hardtime_default_on = 1 "Enables hardtime by default
 colorscheme gruvbox " I think this works on the airline bar also
 let g:ycm_autoclose_preview_window_after_completion=1 " get rid of YCM window after autocomplete is done
 set incsearch
@@ -49,8 +49,8 @@ noremap : ;
 nnoremap j gj
 nnoremap k gk
 inoremap jj <Esc>
-inoremap ww <c-o>:w<cr>
-inoremap jw <Esc>:w<cr>
+" inoremap ww <c-o>:w<cr>
+" inoremap jw <Esc>:w<cr>
 set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
