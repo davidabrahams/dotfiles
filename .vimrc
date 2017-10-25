@@ -12,8 +12,10 @@ let g:jsdoc_param_description_separator = ' - '
 Plug 'flazz/vim-colorschemes' " lots of colorschemes
 set termguicolors
 set background=dark
-Plug 'ctrlpvim/ctrlp.vim' " it seems likes this is more commonly used than command-t
-let g:ctrlp_map = '<c-p>' " actually open ctrlp with <c-p>
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+let $FZF_DEFAULT_COMMAND = 'ag -g ""' " Ignore gitignored files
+nnoremap <c-p> :FZF<cr> " open with ctrl-P
 Plug 'tpope/vim-surround' " Makes it easy to modify matching brackets
 Plug 'vim-airline/vim-airline' " cool status bar
 set laststatus=2 " airline status bar always on
