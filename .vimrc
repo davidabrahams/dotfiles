@@ -51,8 +51,10 @@ noremap : ;
 nnoremap j gj
 nnoremap k gk
 inoremap jj <Esc>
-" inoremap ww <c-o>:w<cr>
-" inoremap jw <Esc>:w<cr>
+
+" Remap F5 to bring up a list of buffers, and allow user to then enter a
+" number and switch to it
+nnoremap <F5> :buffers<CR>:buffer<Space>
 set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
