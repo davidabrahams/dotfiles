@@ -57,6 +57,7 @@ inoremap jj <Esc>
 nnoremap <F5> :buffers<CR>:buffer<Space>
 set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
+syntax on
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
 autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab omnifunc=javacomplete#Complete
 autocmd FileType python setlocal tw=79
@@ -88,3 +89,10 @@ nnoremap <C-n> :call NumberToggle()<cr>
 set relativenumber
 set nu
 set numberwidth=2
+
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
