@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs' " autocomplete matching quotes and paren
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' } " Sweet autocompletion.
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer' } " Sweet autocompletion.
 Plug 'pangloss/vim-javascript' " javascript syntax and indentation
 let g:javascript_plugin_jsdoc = 1
 Plug 'heavenshell/vim-jsdoc' " automatically generate JSDocs
