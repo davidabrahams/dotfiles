@@ -51,6 +51,8 @@ noremap : ;
 nnoremap j gj
 nnoremap k gk
 inoremap jj <Esc>
+" Make Y behave consistently to D and C
+nnoremap Y y$
 
 " Remap F5 to bring up a list of buffers, and allow user to then enter a
 " number and switch to it
