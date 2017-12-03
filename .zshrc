@@ -93,9 +93,11 @@ export KEYTIMEOUT=1
 
 alias mountpublic="(mkdir -p ~/Public) && (sudo mount //fsvs01/Public ~/Public -o user=dabrahams,workgroup=olin.edu,uid=david)"
 alias wifi="sudo service network-manager restart"
-alias tpb="npm run lint && npm test && npm run build:once && cat public/bundle.js | xclip -sel clip"
-alias test="npm run test"
-alias lint="npm run lint:fix"
+alias tpb="npm run lint && npm test && npm run build"
+alias nt="npm run test"
+alias nl="npm run lint:fix"
+alias nb="npm run build"
+alias cl="cpplint **/*.cpp"
 
 function cd () {
     builtin cd "$@" && ls
