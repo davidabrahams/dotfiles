@@ -1,4 +1,6 @@
 #!/bin/bash
+bash setup-js
+bash setup-python
 sudo apt-get -y install curl
 sudo add-apt-repository ppa:jonathonf/vim
 sudo apt-get update
