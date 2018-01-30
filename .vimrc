@@ -62,6 +62,7 @@ set splitbelow " open new hsplit files on the bottom
 syntax on
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
 autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab omnifunc=javacomplete#Complete
+autocmd Filetype c setlocal softtabstop=2 shiftwidth=2 tw=80 expandtab
 autocmd FileType python setlocal tw=79
 " Make F9 execute python scripts
 autocmd FileType python nnoremap <buffer> <F9> :w<cr> :exec '!clear; python' shellescape(@%, 1)<cr>
