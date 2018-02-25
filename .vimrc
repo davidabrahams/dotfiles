@@ -61,6 +61,7 @@ set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
 syntax on
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
+autocmd Filetype sh setlocal softtabstop=2 shiftwidth=2 tw=80 expandtab
 autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab omnifunc=javacomplete#Complete
 autocmd Filetype c setlocal softtabstop=2 shiftwidth=2 tw=80 expandtab commentstring=//\ %s
 autocmd Filetype cpp setlocal softtabstop=2 shiftwidth=2 tw=80 expandtab commentstring=//\ %s
