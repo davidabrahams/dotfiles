@@ -19,6 +19,9 @@
 - `{`/`}` next/prev paragraph
 - `<C-o>`/`<C-i>` navigate cursor position history
 - `g;`/`g,` older/newer position in change list
+- `gg`/`G` go to top/bottom of file
+- `gd`/`gD` go to local/global declaration
+- `*`/`#` go to next/previous whole-word occurence of the word under the cursor
 - `[{`/`]}` jump to start/end of function definition (wrapped in `{}`. Works with `[]` too.)
 
 ## Editing
