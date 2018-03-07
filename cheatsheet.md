@@ -113,6 +113,15 @@ Preface with `a` for "an", `i` for "inner".
 - `<C-t>`/`<C-v>`/`<C-x>` open file in new tab/vsplit/hsplit
 - `<C-n>`/`<C-p>` select the next/previous string in prompt's history.
 
+## Buffer management
+
+- `:bn` buffer next
+- `:bp` buffer previous
+- `:bN`/`N<C-6>` change to buffer number N
+- `:b#`/`<C-6>` change to previously editted buffer
+- `:bd` delete current buffer
+
+
 ## Window management
 
 - `<C-h>`/`C-l` switch to left/right window
