@@ -115,5 +115,5 @@ Preface with `a` for "an", `i` for "inner".
 
 ## Window management
 
-- `<C-w>`+`j`/`k`/`h`/`l` switch to window below, above, left, or right
-- `<C-w>`+`J`/`K`/`H`/`L` move window up, down, left, right
+- `<C-h>`/`C-l` switch to left/right window
+- `<C-w>`+`J`/`K`/`H`/`L` move current window up, down, left, right
