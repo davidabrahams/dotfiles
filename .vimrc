@@ -58,9 +58,6 @@ inoremap jj <Esc>
 " Make Y behave consistently to D and C
 nnoremap Y y$
 
-" Remap F5 to bring up a list of buffers, and allow user to then enter a
-" number and switch to it
-nnoremap <F5> :buffers<CR>:buffer<Space>
 set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
 syntax on
