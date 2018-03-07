@@ -18,8 +18,9 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""' " Ignore gitignored files
 nnoremap <c-p> :FZF<cr> " open with ctrl-P
 Plug 'tpope/vim-surround' " Makes it easy to modify matching brackets
 Plug 'vim-airline/vim-airline' " cool status bar
+let g:airline#extensions#tabline#buffer_idx_mode = 1 " show buffer numbers in tabline
 set laststatus=2 " airline status bar always on
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1 " show buffers in tabline
 Plug 'tpope/vim-commentary' " Allow quick commenting of lines
 Plug 'tpope/vim-repeat' " integrates . command with plugin commands
 Plug 'airblade/vim-gitgutter' " Vim git gutter
@@ -45,6 +46,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'Vimjas/vim-python-pep8-indent'
 call plug#end()
 
+syntax on
+
 " End plugged configuration
 " This is all of my customization
 colorscheme gruvbox " I think this works on the airline bar also
@@ -63,7 +66,6 @@ set splitbelow " open new hsplit files on the bottom
 " Have ctrl-h and ctrl-l switch to the left/right vsplit
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-syntax on
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
 autocmd Filetype sh setlocal softtabstop=2 shiftwidth=2 tw=80 expandtab
 autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab omnifunc=javacomplete#Complete
