@@ -109,9 +109,7 @@ Preface with `a` for "an", `i` for "inner".
 
 - `<C-p>` invole CtrlP
 - `<C-j>`/`<C-k>` scroll up/down results
-- `<C-o>` open file. Prompts you if you want it in a buffer (`i`), or a split.
 - `<C-t>`/`<C-v>`/`<C-x>` open file in new tab/vsplit/hsplit
-- `<C-n>`/`<C-p>` select the next/previous string in prompt's history.
 
 ## Buffer management
 

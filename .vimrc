@@ -32,8 +32,7 @@ Plug 'airblade/vim-rooter'
 Plug 'whatyouhide/vim-lengthmatters' " highlight lines that are too long
 let g:lengthmatters_excluded = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'nerdtree', 'help', 'qf', 'dirvish', 'markdown']
 Plug 'w0rp/ale' " Async linting
-let g:ale_linters = { 'javascript': ['eslint'], 'cpp': ['cpplint', 'cppcheck'], 'c': ['gcc'] }
-let g:ale_c_gcc_executable = 'gcc'
+let g:ale_linters = { 'python': ['flake8'], 'javascript': ['eslint'], 'cpp': ['cpplint', 'cppcheck'], 'c': ['gcc'] }
 let g:ale_c_gcc_options = '-std=c11 -Wall -Wextra -pedantic'
 
 " Auto fix javascript code on save
