@@ -68,8 +68,6 @@ autocmd Filetype c setlocal softtabstop=2 shiftwidth=2 tw=80 expandtab commentst
 autocmd Filetype cpp setlocal softtabstop=2 shiftwidth=2 tw=80 expandtab commentstring=//\ %s
 autocmd Filetype scala setlocal softtabstop=2 shiftwidth=2 tw=120 expandtab
 autocmd FileType python setlocal tw=79
-" Make F9 execute python scripts
-autocmd FileType python nnoremap <buffer> <F9> :w<cr> :exec '!clear; python' shellescape(@%, 1)<cr>
 let g:rooter_patterns = ['.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '.idea/'] " Adding intellij base directories to vim rooter
 
 autocmd FocusLost * set norelativenumber
