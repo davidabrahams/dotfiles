@@ -60,6 +60,9 @@ nnoremap Y y$
 
 set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
+" Have ctrl-h and ctrl-l switch to the left/right vsplit
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 syntax on
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
 autocmd Filetype sh setlocal softtabstop=2 shiftwidth=2 tw=80 expandtab
