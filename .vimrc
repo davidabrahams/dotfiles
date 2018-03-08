@@ -91,9 +91,7 @@ function! NumberToggle()
   endif
 endfunc
 
-nnoremap <C-n> :call NumberToggle()<cr>
-
-" nnoremap <esc> :noh<return><esc>
+nnoremap <C-n> :call NumberToggle()<CR>
 
 set relativenumber
 set nu
@@ -104,4 +102,15 @@ xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 function! ExecuteMacroOverVisualRange()
   echo "@".getcmdline()
   execute ":'<,'>normal @".nr2char(getchar())
+endfunction
+
+" f5 deletes all hidden buffers
+nnoremap <F5> :call DeleteHiddenBuffers()<CR>
+
+function! DeleteHiddenBuffers()
+    let tpbl=[]
+    call map(range(1, tabpagenr('$')), 'extend(tpbl, tabpagebuflist(v:val))')
+    for buf in filter(range(1, bufnr('$')), 'bufexists(v:val) && index(tpbl, v:val)==-1')
+        silent execute 'bwipeout' buf
+    endfor
 endfunction

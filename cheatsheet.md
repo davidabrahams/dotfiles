@@ -118,6 +118,7 @@ Preface with `a` for "an", `i` for "inner".
 - `:bN`/`N<C-6>` change to buffer number N
 - `:b#`/`<C-6>` change to previously editted buffer
 - `:bd` delete current buffer
+- `f5` delete all hidden buffers (using a func in my .vimrc)
 
 
 ## Window management
