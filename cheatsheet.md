@@ -124,4 +124,5 @@ Preface with `a` for "an", `i` for "inner".
 
 - `<C-h>`/`C-l` switch to left/right window
 - `<C-w>`+`J`/`K`/`H`/`L` move current window up, down, left, right
+- `<C-w>`+`j`/`k`/`h`/`l` move to the window that is up, down, left, right
 - `:vsp | bN` open buffer number N in a vsplit
