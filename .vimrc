@@ -15,7 +15,7 @@ set background=dark
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 let $FZF_DEFAULT_COMMAND = 'ag -g ""' " Ignore gitignored files
-nnoremap <c-p> :FZF<cr> " open with ctrl-P
+nnoremap <C-p> :FZF<cr> " open with ctrl-P
 Plug 'tpope/vim-surround' " Makes it easy to modify matching brackets
 Plug 'vim-airline/vim-airline' " cool status bar
 let g:airline#extensions#tabline#buffer_idx_mode = 1 " show buffer numbers in tabline
@@ -80,7 +80,7 @@ autocmd FocusGained * set relativenumber
 autocmd InsertEnter * set norelativenumber
 autocmd InsertLeave * set relativenumber
 
-" Toggle relative line numbers using <C-n>
+" Toggle relative line numbers using <C-m>
 function! NumberToggle()
   if(&relativenumber == 1)
     set norelativenumber
@@ -91,7 +91,12 @@ function! NumberToggle()
   endif
 endfunc
 
-nnoremap <C-n> :call NumberToggle()<CR>
+nnoremap <C-m> :call NumberToggle()<CR>
+
+" use <C-n> and <C-o> to cycle buffers (I would use p for previous, but I'm so
+" used to doing C-p to open files)
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-o> :bprevious<CR>
 
 set relativenumber
 set nu

@@ -113,8 +113,8 @@ Preface with `a` for "an", `i` for "inner".
 
 ## Buffer management
 
-- `:bn` buffer next
-- `:bp` buffer previous
+- `:bn`/`<C-n>` buffer next
+- `:bp`/`<C-p>` buffer previous
 - `:bN`/`N<C-6>` change to buffer number N
 - `:b#`/`<C-6>` change to previously editted buffer
 - `:bd` delete current buffer
