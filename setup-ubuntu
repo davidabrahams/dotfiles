@@ -1,3 +1,4 @@
 #!/bin/bash
 
-echo "\n[device]\nwifi.scan-rand-mac-address=no" | sudo tee --append /etc/NetworkManager/NetworkManager.conf
+# Disable LE Bluetooth so I can use my QC35
+sudo echo "ControllerMode = bredr" | sudo tee -a /etc/bluetooth/main.conf
