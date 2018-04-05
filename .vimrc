@@ -93,10 +93,10 @@ endfunc
 
 nnoremap <C-m> :call NumberToggle()<CR>
 
-" use <C-n> and <C-o> to cycle buffers (I would use p for previous, but I'm so
+" use <C-n> and <C-b> to cycle buffers (I would use p for previous, but I'm so
 " used to doing C-p to open files)
 nnoremap <C-n> :bnext<CR>
-nnoremap <C-o> :bprevious<CR>
+nnoremap <C-b> :bprevious<CR>
 
 set relativenumber
 set nu
