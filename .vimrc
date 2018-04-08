@@ -34,6 +34,7 @@ let g:lengthmatters_excluded = ['unite', 'tagbar', 'startify', 'gundo', 'vimshel
 Plug 'w0rp/ale' " Async linting
 let g:ale_linters = { 'python': ['flake8'], 'javascript': ['eslint'], 'cpp': ['cpplint', 'cppcheck'], 'c': ['gcc'] }
 let g:ale_c_gcc_options = '-std=c11 -Wall -Wextra -pedantic'
+let g:ale_c_parse_makefile = 1
 
 " Auto fix javascript code on save
 let g:ale_fixers = {'javascript': ['eslint']}
