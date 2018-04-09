@@ -18,8 +18,8 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""' " Ignore gitignored files
 nnoremap <C-p> :FZF<cr> " open with ctrl-P
 Plug 'tpope/vim-surround' " Makes it easy to modify matching brackets
 Plug 'vim-airline/vim-airline' " cool status bar
-let g:airline#extensions#tabline#buffer_idx_mode = 1 " show buffer numbers in tabline
 set laststatus=2 " airline status bar always on
+let g:airline#extensions#tabline#buffer_nr_show = 1 " show buffer numbers in tabline
 let g:airline#extensions#tabline#enabled = 1 " show buffers in tabline
 Plug 'tpope/vim-commentary' " Allow quick commenting of lines
 Plug 'tpope/vim-repeat' " integrates . command with plugin commands
