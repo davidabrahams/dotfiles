@@ -43,6 +43,8 @@ let g:ale_fix_on_save = 1
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 Plug 'Yggdroot/indentLine'
+" disable the concel feature of this plugin
+let g:indentLine_setConceal = 0
 Plug 'Vimjas/vim-python-pep8-indent'
 call plug#end()
 
@@ -98,6 +100,9 @@ nnoremap <C-m> :call NumberToggle()<CR>
 " used to doing C-p to open files)
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-b> :bprevious<CR>
+
+" don't concel syntax in json files
+let g:vim_json_syntax_conceal = 0
 
 set relativenumber
 set nu
