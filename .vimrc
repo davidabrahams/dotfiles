@@ -65,6 +65,8 @@ inoremap jj <Esc>
 " Make Y behave consistently to D and C
 nnoremap Y y$
 
+set cinoptions=l1
+
 set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
 " Have ctrl-h and ctrl-l switch to the left/right vsplit
