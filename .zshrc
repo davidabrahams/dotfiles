@@ -97,10 +97,23 @@ alias tpb="npm run lint && npm test && npm run build"
 alias nt="npm run test"
 alias nl="npm run lint:fix"
 alias nb="npm run build"
+alias grbm="git fetch && git rebase -i origin/master"
+alias grb5="git rebase -i HEAD~5"
+alias grb10="git rebase -i HEAD~10"
+alias grb20="git rebase -i HEAD~20"
+alias gc!="git commit -v --amend --no-edit"
+alias gcom="git checkout master"
 alias cl="cpplint **/*.cpp"
 
 function cd () {
     builtin cd "$@" && ls
+}
+
+function grf () {
+    CURRENT_COMMIT="$(git rev-parse HEAD)"
+    git checkout HEAD^ "$@"
+    git commit -v --amend --no-edit
+    git checkout "$CURRENT_COMMIT" "$@"
 }
 
 # TODO: show more that one directory level in prompt
