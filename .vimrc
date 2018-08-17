@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs' " autocomplete matching quotes and paren
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer' } " Sweet autocompletion.
+Plug 'ajh17/VimCompletesMe' " Sweet autocompletion.
 Plug 'pangloss/vim-javascript' " javascript syntax and indentation
 Plug 'mxw/vim-jsx'
 let g:jsx_ext_required = 1 " only use jsx highlighting on jsx files
