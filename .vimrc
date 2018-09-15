@@ -79,6 +79,7 @@ autocmd Filetype c setlocal softtabstop=2 shiftwidth=2 tw=80 expandtab commentst
 autocmd Filetype cpp setlocal softtabstop=2 shiftwidth=2 tw=80 expandtab commentstring=//\ %s
 autocmd Filetype scala setlocal softtabstop=2 shiftwidth=2 tw=120 expandtab
 autocmd FileType python setlocal tw=79
+autocmd Filetype yaml setlocal softtabstop=2 shiftwidth=2 expandtab
 let g:rooter_patterns = ['.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '.idea/'] " Adding intellij base directories to vim rooter
 
 autocmd FocusLost * set norelativenumber
