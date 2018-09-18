@@ -39,7 +39,7 @@ let g:ale_c_gcc_options = '-std=c11 -Wall -Wextra -pedantic'
 let g:ale_c_parse_makefile = 1
 
 " Auto fix javascript code on save
-let g:ale_fixers = {'javascript': ['eslint']}
+let g:ale_fixers = {'javascript': ['eslint'], 'scala': ['scalafmt']}
 let g:ale_fix_on_save = 1
 " Jump to previous and next error with j/k
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
