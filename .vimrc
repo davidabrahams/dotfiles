@@ -80,6 +80,7 @@ autocmd Filetype cpp setlocal softtabstop=2 shiftwidth=2 tw=80 expandtab comment
 autocmd Filetype scala setlocal softtabstop=2 shiftwidth=2 tw=120 expandtab
 autocmd FileType python setlocal tw=79
 autocmd Filetype yaml setlocal softtabstop=2 shiftwidth=2 expandtab
+autocmd BufRead,BufNewFile *.sky set filetype=python " treat skylark as python
 let g:rooter_patterns = ['.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '.idea/'] " Adding intellij base directories to vim rooter
 
 autocmd FocusLost * set norelativenumber
