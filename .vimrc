@@ -131,3 +131,6 @@ function! DeleteHiddenBuffers()
         silent execute 'bwipeout' buf
     endfor
 endfunction
+
+set list listchars=tab:\|\-
+set tabstop=4
