@@ -30,7 +30,7 @@ Plug 'artur-shaik/vim-javacomplete2' " Java autocomplete
 Plug 'tpope/vim-unimpaired' " Some useful key bindings
 " Plug 'justinmk/vim-sneak' " This looks useful for when I actually become good at using vim.
 " let g:sneak#label = 1
-Plug 'airblade/vim-rooter'
+" Plug 'airblade/vim-rooter'
 Plug 'whatyouhide/vim-lengthmatters' " highlight lines that are too long
 let g:lengthmatters_excluded = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'nerdtree', 'help', 'qf', 'dirvish', 'markdown']
 Plug 'w0rp/ale' " Async linting
@@ -104,8 +104,8 @@ nnoremap <C-m> :call NumberToggle()<CR>
 
 " use <C-n> and <C-b> to cycle buffers (I would use p for previous, but I'm so
 " used to doing C-p to open files)
-nnoremap <C-n> :bnext<CR>
-nnoremap <C-b> :bprevious<CR>
+" nnoremap <C-n> :bnext<CR>
+" nnoremap <C-b> :bprevious<CR>
 
 " don't concel syntax in json files
 let g:vim_json_syntax_conceal = 0
