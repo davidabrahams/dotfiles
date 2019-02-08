@@ -83,6 +83,7 @@ autocmd Filetype yaml setlocal softtabstop=2 shiftwidth=2 expandtab
 autocmd BufRead,BufNewFile *.sky set filetype=python " treat skylark as python
 let g:rooter_patterns = ['.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '.idea/'] " Adding intellij base directories to vim rooter
 
+set smartcase
 set relativenumber
 
 " Toggle relative line numbers using <C-m>
