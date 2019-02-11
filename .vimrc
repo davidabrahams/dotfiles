@@ -89,11 +89,9 @@ set relativenumber
 " Toggle relative line numbers using <C-m>
 function! NumberToggle()
   if(&relativenumber == 1)
-    set norelativenumber
-    " set number
+    setglobal norelativenumber
   else
-    " set nonumber
-    set relativenumber
+    setglobal relativenumber
   endif
 endfunc
 
