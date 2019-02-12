@@ -7,7 +7,7 @@ let g:jsx_ext_required = 1 " only use jsx highlighting on jsx files
 let g:javascript_plugin_jsdoc = 1
 Plug 'heavenshell/vim-jsdoc' " automatically generate JSDocs
 " Using ctrl-l
-nmap <silent> <C-l> <Plug>(jsdoc)
+" nmap <silent> <C-l> <Plug>(jsdoc)
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
 let g:jsdoc_param_description_separator = ' - '
@@ -129,3 +129,6 @@ endfunction
 
 set list listchars=tab:\|\-
 set tabstop=4
+
+nnoremap
+          :Tags<cr> " remap ctrl-l to use fzf's tag finder. TODO: this only works in OSX
