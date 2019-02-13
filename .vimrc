@@ -128,7 +128,5 @@ function! DeleteHiddenBuffers()
 endfunction
 
 set list listchars=tab:\|\-
-set tabstop=4
-
-nnoremap
-          :Tags<cr> " remap ctrl-l to use fzf's tag finder. TODO: this only works in OSX
+nnoremap <C-r>:Tags<cr> " remap ctrl-r to use fzf's tag finder.
+nnoremap <C-]>g<C-]> " jump to tag under cursor, unless there are multiple. Then, show a list
