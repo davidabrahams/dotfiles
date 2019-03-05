@@ -23,6 +23,7 @@ Plug 'vim-airline/vim-airline' " cool status bar
 set laststatus=2 " airline status bar always on
 let g:airline#extensions#tabline#buffer_nr_show = 1 " show buffer numbers in tabline
 let g:airline#extensions#tabline#enabled = 1 " show buffers in tabline
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 Plug 'tpope/vim-commentary' " Allow quick commenting of lines
 Plug 'tpope/vim-repeat' " integrates . command with plugin commands
 Plug 'airblade/vim-gitgutter' " Vim git gutter
@@ -42,8 +43,8 @@ let g:ale_c_parse_makefile = 1
 let g:ale_fixers = {'javascript': ['eslint'], 'scala': ['scalafmt']}
 let g:ale_fix_on_save = 1
 " Jump to previous and next error with j/k
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+" nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+" nmap <silent> <C-j> <Plug>(ale_next_wrap)
 Plug 'Yggdroot/indentLine'
 " disable the concel feature of this plugin
 let g:indentLine_setConceal = 0
@@ -55,7 +56,6 @@ syntax on
 " End plugged configuration
 " This is all of my customization
 colorscheme gruvbox " I think this works on the airline bar also
-let g:ycm_autoclose_preview_window_after_completion=1 " get rid of YCM window after autocomplete is done
 set incsearch
 noremap ; :
 noremap : ;
