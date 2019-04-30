@@ -74,7 +74,9 @@ function! NumberToggle()
   endif
 endfunc
 
-nnoremap <C-m> :call NumberToggle()<CR>
+" nnoremap <C-m> :call NumberToggle()<CR>
+"
+nmap <Leader>p :History<CR>
 
 set norelativenumber
 set nu
