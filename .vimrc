@@ -76,7 +76,8 @@ endfunc
 
 " nnoremap <C-m> :call NumberToggle()<CR>
 "
-nmap <Leader>p :History<CR>
+let mapleader="\\"
+nnoremap <leader>p :History<cr>
 
 set norelativenumber
 set nu
