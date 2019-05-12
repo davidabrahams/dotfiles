@@ -15,12 +15,12 @@ Plug 'tpope/vim-repeat' " integrates . command with plugin commands
 Plug 'airblade/vim-gitgutter' " Vim git gutter
 Plug 'tpope/vim-unimpaired' " Some useful key bindings
 Plug 'w0rp/ale' " Async linting
-let g:ale_linters = { 'python': ['flake8'], 'javascript': [], 'cpp': ['cpplint', 'cppcheck', 'g++'], 'c': ['gcc'], 'scala': ['scalac'] }
+let g:ale_linters = { 'python': ['flake8'], 'javascript': [], 'cpp': ['cpplint', 'cppcheck', 'g++'], 'c': ['gcc'], 'scala': ['scalac'], 'haskell': ['stack-build'] }
 let g:ale_c_gcc_options = '-std=c11 -Wall -Wextra -pedantic'
 let g:ale_c_parse_makefile = 1
 
 " Auto fix javascript code on save
-let g:ale_fixers = {'javascript': ['eslint']}
+let g:ale_fixers = {'javascript': ['eslint'], 'haskell': ['brittany']}
 let g:ale_fix_on_save = 1
 " Jump to previous and next error with j/k
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
