@@ -47,8 +47,15 @@ inoremap jj <Esc>
 nnoremap Y y$
 set showtabline=2
 
-let g:lightline = {}
+" show full path in lightline bar
+let g:lightline = {
+      \ 'component_function': {
+      \   'filename': 'LightlineFilename',
+      \ }
+      \ }
 
+
+" add a buffer line (as opposed to a tabline)
 let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
 let g:lightline.component_type   = {'buffers': 'tabsel'}
@@ -57,6 +64,14 @@ let g:lightline#bufferline#show_number = 1
 
 let g:lightline#bufferline#filename_modifier = ':t'
 
+function! LightlineFilename()
+  let root = fnamemodify(get(b:, 'git_dir'), ':h')
+  let path = expand('%:p')
+  if path[:len(root)-1] ==# root
+    return path[len(root)+1:]
+  endif
+  return expand('%')
+endfunction
 set cinoptions=l1
 
 set splitright " open new vsplit files on the right
