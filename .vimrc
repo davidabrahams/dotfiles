@@ -30,6 +30,7 @@ Plug 'Yggdroot/indentLine'
 " disable the concel feature of this plugin
 let g:indentLine_setConceal = 0
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'purescript-contrib/purescript-vim'
 call plug#end()
 
 syntax on
