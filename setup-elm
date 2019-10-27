@@ -1,0 +1,2 @@
+npm install -g elm
+npm install -g elm-format
