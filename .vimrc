@@ -16,7 +16,8 @@ Plug 'airblade/vim-gitgutter' " Vim git gutter
 Plug 'tpope/vim-unimpaired' " Some useful key bindings
 Plug 'dense-analysis/ale' " Async linting
 Plug 'mengelbrecht/lightline-bufferline'
-let g:ale_linters = { 'python': ['pycodestyle'], 'javascript': [], 'cpp': ['cpplint', 'cppcheck', 'g++'], 'c': ['gcc'], 'scala': ['scalac'], 'haskell': ['stack-build'] }
+Plug 'ElmCast/elm-vim'
+let g:ale_linters = { 'python': ['flake8'], 'javascript': [], 'cpp': ['cpplint', 'cppcheck', 'g++'], 'c': ['gcc'], 'scala': ['scalac'], 'haskell': ['stack-build'] }
 let g:ale_c_gcc_options = '-std=c11 -Wall -Wextra -pedantic'
 let g:ale_c_parse_makefile = 1
 
@@ -86,7 +87,7 @@ autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab omnif
 autocmd Filetype c setlocal softtabstop=2 shiftwidth=2 tw=80 expandtab commentstring=//\ %s
 autocmd Filetype cpp setlocal softtabstop=2 shiftwidth=2 tw=80 expandtab commentstring=//\ %s
 autocmd Filetype scala setlocal softtabstop=2 shiftwidth=2 tw=120 expandtab
-autocmd FileType python setlocal tw=79
+autocmd FileType python setlocal tw=99
 autocmd Filetype yaml setlocal softtabstop=2 shiftwidth=2 expandtab
 autocmd BufRead,BufNewFile *.sky set filetype=python
 
