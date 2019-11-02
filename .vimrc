@@ -107,6 +107,7 @@ endfunc
 "
 let mapleader="\\"
 nnoremap <leader>p :History<cr>
+nnoremap <leader>o :Tags<cr>
 
 set norelativenumber
 set nu
@@ -133,7 +134,6 @@ endfunction
 set list listchars=tab:\|\-
 set tabstop=4
 
-nnoremap <C-r> :Tags<cr> " remap ctrl-l to use fzf's tag finder
 nnoremap <C-]> g<C-]> " jump to tag under cursor, unless there are multiple. Then, show a list
 
 command Bd bp\|bd \#
