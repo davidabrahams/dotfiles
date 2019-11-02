@@ -22,8 +22,9 @@ let g:ale_c_gcc_options = '-std=c11 -Wall -Wextra -pedantic'
 let g:ale_c_parse_makefile = 1
 
 " Auto fix javascript code on save
-let g:ale_fixers = {'javascript': ['eslint'], 'haskell': ['brittany']}
+let g:ale_fixers = {'javascript': ['eslint'], 'haskell': ['brittany'], 'elm': ['elm-format']}
 let g:ale_fix_on_save = 1
+let g:elm_format_autosave = 0 " ALE can fix elm with the elm-format fixer, no need to have two things which do the same thing
 " Jump to previous and next error with j/k
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
