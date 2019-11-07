@@ -37,6 +37,8 @@ call plug#end()
 
 syntax on
 
+nnoremap <leader>w :exe 'Ag' expand('<cword>')<cr> " Ag for the word under the cursor
+
 " End plugged configuration
 " This is all of my customization
 colorscheme gruvbox " I think this works on the airline bar also
