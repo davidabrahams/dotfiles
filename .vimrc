@@ -29,8 +29,6 @@ let g:elm_format_autosave = 0 " ALE can fix elm with the elm-format fixer, no ne
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 Plug 'Yggdroot/indentLine'
-" disable the concel feature of this plugin
-let g:indentLine_setConceal = 0
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'purescript-contrib/purescript-vim'
 call plug#end()
