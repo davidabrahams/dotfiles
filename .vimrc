@@ -14,6 +14,7 @@ Plug 'tpope/vim-commentary' " Allow quick commenting of lines
 Plug 'tpope/vim-repeat' " integrates . command with plugin commands
 Plug 'airblade/vim-gitgutter' " Vim git gutter
 Plug 'tpope/vim-unimpaired' " Some useful key bindings
+Plug 'tpope/vim-fugitive' " git integration
 Plug 'dense-analysis/ale' " Async linting
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'ElmCast/elm-vim'
@@ -54,6 +55,13 @@ set showtabline=2
 let g:lightline = {
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ 'active': {
+      \   'left': [ [ 'mode' ],
+      \             [ 'gitbranch', 'filename'] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'filetype' ] ]
       \ }
       \ }
 
