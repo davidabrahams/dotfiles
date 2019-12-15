@@ -59,7 +59,7 @@ let g:lightline = {
       \ },
       \ 'active': {
       \   'left': [ [ 'mode' ],
-      \             [ 'gitbranch', 'filename'] ],
+      \             ['filename', 'gitbranch' ] ],
       \   'right': [ [ 'lineinfo' ],
       \              [ 'filetype' ] ]
       \ }
