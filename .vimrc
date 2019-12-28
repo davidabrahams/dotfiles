@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'ajh17/VimCompletesMe' " Sweet autocompletion.
 Plug 'flazz/vim-colorschemes' " lots of colorschemes
 set termguicolors
-set background=dark
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 let $FZF_DEFAULT_COMMAND = 'ag -g ""' " Ignore gitignored files
@@ -18,7 +17,8 @@ Plug 'tpope/vim-fugitive' " git integration
 Plug 'dense-analysis/ale' " Async linting
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'ElmCast/elm-vim'
-let g:ale_linters = { 'python': [], 'javascript': [], 'cpp': ['clangtidy', 'cpplint'], 'c': ['gcc'], 'scala': ['scalac'], 'haskell': ['stack-build'] }
+Plug 'Yggdroot/indentLine'
+let g:ale_linters = { 'python': [], 'javascript': [], 'cpp': ['cpplint'], 'c': ['gcc'], 'scala': ['scalac'], 'haskell': ['stack-build'] }
 " only run the linters explicitly listed above. New filetypes will not be linted without added to this list
 let g:ale_linters_explicit = 1
 let g:ale_c_gcc_options = '-std=c11 -Wall -Wextra -pedantic'
@@ -28,8 +28,6 @@ let g:ale_c_parse_makefile = 1
 let g:ale_fixers = {'javascript': ['eslint'], 'haskell': ['brittany'], 'elm': ['elm-format']}
 let g:ale_fix_on_save = 1
 let g:elm_format_autosave = 0 " ALE can fix elm with the elm-format fixer, no need to have two things which do the same thing
-Plug 'Yggdroot/indentLine'
-Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'purescript-contrib/purescript-vim'
 call plug#end()
 
@@ -94,17 +92,16 @@ nnoremap <C-j> <C-w><C-j>
 nnoremap <C-L> <C-W><C-l>
 nnoremap <C-H> <C-W><C-h>
 
-" some reasonable defaults
-set softtabstop=4 shiftwidth=4 tw=80 expandtab
+set softtabstop=4 " how many spaces to insert when I hit <Tab> in insert mode
+set shiftwidth=4 " how many spaces to shift on >>
+set tw=80 " textwidth
+set expandtab " create spaces in insert mode
 
-autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100 expandtab
-autocmd Filetype sh setlocal softtabstop=2 shiftwidth=2 tw=80 expandtab
-autocmd Filetype java setlocal softtabstop=4 shiftwidth=4 tw=120 expandtab omnifunc=javacomplete#Complete
-autocmd Filetype c setlocal softtabstop=2 shiftwidth=2 tw=80 expandtab commentstring=//\ %s
-autocmd Filetype cpp setlocal softtabstop=2 shiftwidth=2 tw=80 expandtab commentstring=//\ %s
-autocmd Filetype scala setlocal softtabstop=2 shiftwidth=2 tw=120 expandtab
-autocmd FileType python setlocal tw=99 softtabstop=4 shiftwidth=4
-autocmd Filetype yaml setlocal softtabstop=2 shiftwidth=2 expandtab
+autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100
+autocmd Filetype sh setlocal softtabstop=2 shiftwidth=2
+autocmd Filetype cpp setlocal softtabstop=2 shiftwidth=2 commentstring=//\ %s
+autocmd Filetype scala setlocal softtabstop=2 shiftwidth=2 tw=120
+autocmd FileType python setlocal tw=99
 autocmd BufRead,BufNewFile *.sky set filetype=python
 autocmd BufRead,BufNewFile *BUILD set filetype=python
 
@@ -130,10 +127,8 @@ function! DeleteHiddenBuffers()
     endfor
 endfunction
 
-set list listchars=tab:\|\-
-set tabstop=4
-
 " jump to tag under cursor, unless there are multiple. Then, show a list
 nnoremap <C-]> g<C-]>
 
+" Bd deletes the current buffer, without closing the view it is in
 command Bd bp\|bd \#
