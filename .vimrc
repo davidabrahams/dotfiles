@@ -18,7 +18,9 @@ Plug 'tpope/vim-fugitive' " git integration
 Plug 'dense-analysis/ale' " Async linting
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'ElmCast/elm-vim'
-let g:ale_linters = { 'python': ['flake8'], 'javascript': [], 'cpp': ['cpplint', 'cppcheck', 'g++'], 'c': ['gcc'], 'scala': ['scalac'], 'haskell': ['stack-build'] }
+let g:ale_linters = { 'python': [], 'javascript': [], 'cpp': ['clangtidy', 'cpplint'], 'c': ['gcc'], 'scala': ['scalac'], 'haskell': ['stack-build'] }
+" only run the linters explicitly listed above. New filetypes will not be linted without added to this list
+let g:ale_linters_explicit = 1
 let g:ale_c_gcc_options = '-std=c11 -Wall -Wextra -pedantic'
 let g:ale_c_parse_makefile = 1
 
