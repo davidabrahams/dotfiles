@@ -115,13 +115,6 @@ set norelativenumber
 set nu
 set numberwidth=2
 
-xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
-
-function! ExecuteMacroOverVisualRange()
-  echo "@".getcmdline()
-  execute ":'<,'>normal @".nr2char(getchar())
-endfunction
-
 " f5 deletes all hidden buffers
 " nnoremap <F5> :call DeleteHiddenBuffers()<CR>
 
