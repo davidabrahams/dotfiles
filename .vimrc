@@ -129,6 +129,7 @@ endfunction
 set list listchars=tab:\|\-
 set tabstop=4
 
-nnoremap <C-]> g<C-]> " jump to tag under cursor, unless there are multiple. Then, show a list
+" jump to tag under cursor, unless there are multiple. Then, show a list
+nnoremap <C-]> g<C-]>
 
 command Bd bp\|bd \#
