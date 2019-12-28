@@ -28,9 +28,6 @@ let g:ale_c_parse_makefile = 1
 let g:ale_fixers = {'javascript': ['eslint'], 'haskell': ['brittany'], 'elm': ['elm-format']}
 let g:ale_fix_on_save = 1
 let g:elm_format_autosave = 0 " ALE can fix elm with the elm-format fixer, no need to have two things which do the same thing
-" Jump to previous and next error with j/k
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
 Plug 'Yggdroot/indentLine'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'purescript-contrib/purescript-vim'
@@ -89,6 +86,13 @@ set cinoptions=l1
 
 set splitright " open new vsplit files on the right
 set splitbelow " open new hsplit files on the bottom
+
+" Have ctrl-h and ctrl-l switch to the left/right vsplit
+" Jump to previous and next error with j/k
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-L> <C-W><C-l>
+nnoremap <C-H> <C-W><C-h>
 
 " some reasonable defaults
 set softtabstop=4 shiftwidth=4 tw=80 expandtab
