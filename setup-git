@@ -4,7 +4,7 @@
 # wget https://raw.githubusercontent.com/davidabrahams/dotfiles/master/setup-git && ./setup-git
 sudo apt-get -y install git git-core
 
-git config --global user.email "david.abrahams@students.olin.edu"
+git config --global user.email "da.j.abrahams@gmail.com"
 git config --global user.name "David Abrahams"
 
 git config --global core.editor "vi"
