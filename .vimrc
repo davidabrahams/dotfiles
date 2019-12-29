@@ -32,6 +32,7 @@ Plug 'purescript-contrib/purescript-vim'
 call plug#end()
 
 syntax on
+set background=dark
 
 nnoremap <leader>w :exe 'Ag' expand('<cword>')<cr> " Ag for the word under the cursor
 
