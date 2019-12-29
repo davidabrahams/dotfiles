@@ -132,3 +132,5 @@ nnoremap <C-]> g<C-]>
 
 " Bd deletes the current buffer, without closing the view it is in
 command Bd bp\|bd \#
+
+set backspace=indent,eol,start
