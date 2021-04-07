@@ -13,10 +13,8 @@ Plug 'tpope/vim-commentary' " Allow quick commenting of lines
 Plug 'tpope/vim-repeat' " integrates . command with plugin commands
 Plug 'airblade/vim-gitgutter' " Vim git gutter
 Plug 'tpope/vim-unimpaired' " Some useful key bindings
-Plug 'tpope/vim-fugitive' " git integration
 Plug 'dense-analysis/ale' " Async linting
 Plug 'mengelbrecht/lightline-bufferline'
-Plug 'ElmCast/elm-vim'
 Plug 'Yggdroot/indentLine'
 let g:ale_linters = { 'python': [], 'javascript': [], 'cpp': ['cpplint'], 'c': ['gcc'], 'scala': ['scalac'], 'haskell': ['stack-build'] }
 " only run the linters explicitly listed above. New filetypes will not be linted without added to this list
@@ -116,17 +114,6 @@ nnoremap <leader>o :Tags<cr>
 set norelativenumber
 set nu
 set numberwidth=2
-
-" f5 deletes all hidden buffers
-" nnoremap <F5> :call DeleteHiddenBuffers()<CR>
-
-function! DeleteHiddenBuffers()
-    let tpbl=[]
-    call map(range(1, tabpagenr('$')), 'extend(tpbl, tabpagebuflist(v:val))')
-    for buf in filter(range(1, bufnr('$')), 'bufexists(v:val) && index(tpbl, v:val)==-1')
-        silent execute 'bwipeout' buf
-    endfor
-endfunction
 
 " jump to tag under cursor, unless there are multiple. Then, show a list
 nnoremap <C-]> g<C-]>

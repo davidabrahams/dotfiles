@@ -1,15 +1,8 @@
 #!/bin/bash
-bash setup-js
-bash setup-python
 sudo apt-get -y install curl
-sudo add-apt-repository ppa:jonathonf/vim
-sudo apt-get update
 sudo apt-get install silversearcher-ag
 sudo apt-get -y install vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 cd $HOME
-sudo apt-get -y install build-essential cmake
-# run setup-js first
-sudo npm install -g tern
 wget https://github.com/davidabrahams/dotfiles/raw/master/.vimrc
 vim +PlugInstall

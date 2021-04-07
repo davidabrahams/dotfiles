@@ -10,4 +10,4 @@ git config --global user.name "David Abrahams"
 git config --global core.editor "vi"
 git config --global push.default "current"
 
-ssh-keygen -t rsa -b 4096 -C "david.abrahams@students.olin.edu"
+ssh-keygen -t rsa -b 4096 -C "da.j.abrahams@gmail.com"
