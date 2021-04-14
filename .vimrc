@@ -5,7 +5,8 @@ set termguicolors
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 let $FZF_DEFAULT_COMMAND = 'ag -g ""' " Ignore gitignored files
-nnoremap <C-p> :FZF<cr>
+nnoremap <C-p> :Files<cr>
+nnoremap <C-b> :Buffers<cr>
 Plug 'tpope/vim-surround' " Makes it easy to modify matching brackets
 Plug 'itchyny/lightline.vim' " cool status bar
 set laststatus=2 " airline status bar always on
