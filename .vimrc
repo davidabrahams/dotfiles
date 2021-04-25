@@ -33,7 +33,7 @@ call plug#end()
 syntax on
 set background=dark
 
-nnoremap <leader>w :exe 'Ag' expand('<cword>')<cr> " Ag for the word under the cursor
+nnoremap <leader>w :exe 'Ag' expand('<cword>')<cr>
 
 " End plugged configuration
 " This is all of my customization
