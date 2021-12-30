@@ -100,13 +100,16 @@ set expandtab " create spaces in insert mode
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100
 autocmd Filetype sh setlocal softtabstop=2 shiftwidth=2
 autocmd Filetype cpp setlocal softtabstop=2 shiftwidth=2 commentstring=//\ %s
-autocmd Filetype scala setlocal softtabstop=2 shiftwidth=2 tw=80
+autocmd Filetype scala setlocal softtabstop=2 shiftwidth=2 tw=120
 autocmd FileType python setlocal tw=99
 autocmd BufRead,BufNewFile *.sky set filetype=python
 autocmd BufRead,BufNewFile *BUILD set filetype=python
+autocmd BufRead,BufNewFile *.bzl set filetype=python
 
 set ignorecase
 set smartcase
+
+let g:indentLine_setConceal = 0
 
 let mapleader="\\"
 nnoremap <leader>p :History<cr>
