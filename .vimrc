@@ -48,6 +48,8 @@ inoremap jj <Esc>
 nnoremap Y y$
 set showtabline=2
 
+let g:vim_json_conceal = 0
+
 " show full path in lightline bar
 let g:lightline = {
       \ 'component_function': {
@@ -109,7 +111,6 @@ autocmd BufRead,BufNewFile *.bzl set filetype=python
 set ignorecase
 set smartcase
 
-let g:indentLine_setConceal = 0
 
 let mapleader="\\"
 nnoremap <leader>p :History<cr>
