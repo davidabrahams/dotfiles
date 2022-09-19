@@ -127,3 +127,4 @@ nnoremap <C-]> g<C-]>
 command Bd bp\|bd \#
 
 set backspace=indent,eol,start
+set nofixeol
