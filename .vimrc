@@ -1,7 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'ajh17/VimCompletesMe' " Sweet autocompletion.
 Plug 'flazz/vim-colorschemes' " lots of colorschemes
-set termguicolors
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 let $FZF_DEFAULT_COMMAND = 'ag -g ""' " Ignore gitignored files
