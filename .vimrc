@@ -15,7 +15,7 @@ Plug 'airblade/vim-gitgutter' " Vim git gutter
 Plug 'tpope/vim-unimpaired' " Some useful key bindings
 Plug 'dense-analysis/ale' " Async linting
 Plug 'mengelbrecht/lightline-bufferline'
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
 let g:ale_linters = { 'python': [], 'javascript': [], 'cpp': ['cpplint'], 'c': ['gcc'], 'scala': ['scalac'], 'haskell': ['stack-build'] }
 " only run the linters explicitly listed above. New filetypes will not be linted without added to this list
 let g:ale_linters_explicit = 1
@@ -101,6 +101,7 @@ set expandtab " create spaces in insert mode
 autocmd Filetype javascript setlocal softtabstop=2 shiftwidth=2 tw=100
 autocmd Filetype sh setlocal softtabstop=2 shiftwidth=2
 autocmd Filetype cpp setlocal softtabstop=2 shiftwidth=2 commentstring=//\ %s
+autocmd FileType json,yaml set softtabstop=2 shiftwidth=2
 autocmd Filetype scala setlocal softtabstop=2 shiftwidth=2 tw=120
 autocmd FileType python setlocal tw=99
 autocmd BufRead,BufNewFile *.sky set filetype=python
@@ -127,3 +128,6 @@ command Bd bp\|bd \#
 
 set backspace=indent,eol,start
 set nofixeol
+
+highlight ColorColumn ctermbg=LightGray
+call matchadd('ColorColumn', '\%121v', 100)
