@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'flazz/vim-colorschemes' " lots of colorschemes
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 let $FZF_DEFAULT_COMMAND = 'ag -g ""' " Ignore gitignored files
 nnoremap <C-p> :Files<cr>
 nnoremap <C-b> :Buffers<cr>
@@ -10,12 +10,10 @@ Plug 'tpope/vim-surround' " Makes it easy to modify matching brackets
 Plug 'itchyny/lightline.vim' " cool status bar
 set laststatus=2 " airline status bar always on
 Plug 'tpope/vim-commentary' " Allow quick commenting of lines
-Plug 'tpope/vim-repeat' " integrates . command with plugin commands
 Plug 'airblade/vim-gitgutter' " Vim git gutter
 Plug 'tpope/vim-unimpaired' " Some useful key bindings
 Plug 'dense-analysis/ale' " Async linting
 Plug 'mengelbrecht/lightline-bufferline'
-" Plug 'Yggdroot/indentLine'
 let g:ale_linters = { 'python': [], 'javascript': [], 'cpp': ['cpplint'], 'c': ['gcc'], 'scala': ['scalac'], 'haskell': ['stack-build'] }
 " only run the linters explicitly listed above. New filetypes will not be linted without added to this list
 let g:ale_linters_explicit = 1
@@ -23,10 +21,8 @@ let g:ale_c_gcc_options = '-std=c11 -Wall -Wextra -pedantic'
 let g:ale_c_parse_makefile = 1
 
 " Auto fix javascript code on save
-let g:ale_fixers = {'javascript': ['eslint'], 'haskell': ['brittany'], 'elm': ['elm-format']}
+let g:ale_fixers = {'javascript': ['eslint'], 'haskell': ['brittany']}
 let g:ale_fix_on_save = 1
-let g:elm_format_autosave = 0 " ALE can fix elm with the elm-format fixer, no need to have two things which do the same thing
-Plug 'purescript-contrib/purescript-vim'
 call plug#end()
 
 syntax on
