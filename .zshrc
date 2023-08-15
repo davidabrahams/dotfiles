@@ -106,7 +106,6 @@ alias grb10="git rebase -i HEAD~10"
 alias grb20="git rebase -i HEAD~20"
 alias gc!="git commit -v --amend --no-edit"
 alias gcom="git checkout master && git fetch origin master && git reset --hard origin/master"
-alias repl="/Users/davidabrahams/stripe/zoolander/bin/scala-repl"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
