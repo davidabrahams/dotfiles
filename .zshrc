@@ -100,12 +100,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias grbm="git fetch origin master && git rebase -i origin/master"
+alias grbm="git fetch origin main && git rebase -i origin/main"
 alias grb5="git rebase -i HEAD~5"
 alias grb10="git rebase -i HEAD~10"
 alias grb20="git rebase -i HEAD~20"
 alias gc!="git commit -v --amend --no-edit"
-alias gcom="git checkout master && git fetch origin master && git reset --hard origin/master"
+alias gcom="git checkout main && git fetch origin main && git reset --hard origin/main"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
