@@ -99,7 +99,7 @@ autocmd Filetype sh setlocal softtabstop=2 shiftwidth=2
 autocmd Filetype cpp setlocal softtabstop=2 shiftwidth=2 commentstring=//\ %s
 autocmd FileType json,yaml set softtabstop=2 shiftwidth=2
 autocmd Filetype scala setlocal softtabstop=2 shiftwidth=2 tw=120
-autocmd FileType python setlocal tw=99
+autocmd FileType python setlocal tw=120
 autocmd BufRead,BufNewFile *.sky set filetype=python
 autocmd BufRead,BufNewFile *BUILD set filetype=python
 autocmd BufRead,BufNewFile *.bzl set filetype=python
