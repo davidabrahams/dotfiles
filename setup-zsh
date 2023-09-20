@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sudo apt-get -y install zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 rm -f .zshrc
 wget https://github.com/davidabrahams/dotfiles/raw/master/.zshrc
