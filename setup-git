@@ -9,4 +9,4 @@ git config --global user.name "David Abrahams"
 git config --global core.editor "vi"
 git config --global push.default "current"
 
-ssh-keygen -t ed25519 -C "da.j.abrahams@gmail.com"
+git config --global pull.ff only
